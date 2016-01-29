@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" ng-app="tgApp">
     <head>
         <title>CREATIVES | TWO GURUZ</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -26,6 +26,12 @@
         <!-- Jquery Lib version 1.11.0 -->
         <script type="text/javascript" src="./js/jquery.min.js"></script>
         
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
+        <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
+        <script src="./js/angularjs/app.js"></script>
         <!-- IE hack -->
         <!--[if lte IE 9]>
         <link rel='stylesheet' id='cssie'  href='./styles/ie.css' type='text/css' media='screen' />
@@ -37,6 +43,7 @@
         <!--[if lte IE 7]>
         <div style="width: 100%;" class="messagebox_orange">Your browser is obsolete and does not support this webpage. Please use newer version of your browser or visit <a href="http://www.ie6countdown.com/" target="_new">Internet Explorer 6 countdown page</a>  for more information. </div>
         <![endif]-->
+        
     </head>
     <body class="home page page-template-default responsive-ux boxed-line aside-layout-ux">
         <!-- Page Loading -->
@@ -151,10 +158,12 @@
             <div id="main-wrap">
                 <div id="main" style="-webkit-transform-origin: 50% 665px;">
                     <div id="content">
+                        <div ng-view></div>
                         <div id="post-217" class="post-217 page type-page status-publish hentry">
                             <div class="row-fluid " style="min-height: 799px;">
                                 <div id="content_wrap" class="">
                                     <div class="content-wrap-inn ">
+
                                         <div class="container">
                                             <div class="title-bar-wrap title-centered" id="title-bar">
                                                 <div id="title-wrap">
@@ -166,64 +175,111 @@
                                                 </div><!--End #title-wrap-->
                                             </div><!--End #title-bar-wrap"-->
                                         </div>
+
+                                        <!-- <div class="container">
+                                            <div>
+                                              <label>Name:</label>
+                                              <input type="text" ng-model="yourName" placeholder="Enter a name here">
+                                              <hr>
+                                              <h1>Hello {{yourName}}!</h1>
+                                            </div>
+                                            <h2>Todo</h2>
+                                            <div ng-controller="TodoListController as todoList">
+                                              <span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
+                                              [ <a href="" ng-click="todoList.archive()">archive</a> ]
+                                              <ul class="unstyled">
+                                                <li ng-repeat="todo in todoList.todos">
+                                                  <input type="checkbox" ng-model="todo.done">
+                                                  <span class="done-{{todo.done}}">{{todo.text}}</span>
+                                                </li>
+                                              </ul>
+                                              <form ng-submit="todoList.addTodo()">
+                                                <input type="text" ng-model="todoList.todoText"  size="30"
+                                                       placeholder="add new todo here">
+                                                <input class="btn-primary" type="submit" value="add">
+                                              </form>
+                                            </div>
+                                            <h2>Creatives Controller</h2>
+                                            <div ng-controller="CreativesController">
+                                                <div class="row-fluid">
+                                                    <div class="span3 moudle" ng-repeat="data in dataholder">
+                                                        <img ng-src="{{data.Path}}" class="img-responsive"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> -->
                                         <div class="container">
                                                 <div class="row-fluid">
-                                                    <div class="span3 moudle">
+                                                    <div class="span2 moudle">
                                                         <section class="infrographic bignumber ux-mod-nobg">
                                                             <div class="bignumber-item post-color-default"
                                                                 data-digit="2">0</div>
                                                             <h1 class="infrographic-tit">GRAPHIC DESIGNERS</h1>
-                                                            <p class="infrographic-subtit">Mattis tristique tincidunt
-                                                                porttitor enim, turpis scelerisque, nascetur.</p>
+                                                            <!-- <p class="infrographic-subtit">Mattis tristique tincidunt
+                                                                porttitor enim, turpis scelerisque, nascetur.</p> -->
                                                         </section>
                                                         <!--End infrographic bignumber-->
                                                     </div>
-                                                    <div class="span3 moudle">
+                                                    <div class="span2 moudle">
                                                         <section class="infrographic bignumber ux-mod-nobg">
-                                                            <div class="bignumber-item theme-color-7" data-digit="3">0</div>
+                                                            <div class="bignumber-item theme-color-1" data-digPathit="3">0</div>
                                                             <h1 class="infrographic-tit">MODELS</h1>
-                                                            <p class="infrographic-subtit">Mattis tristique tincidunt
-                                                                porttitor enim, turpis scelerisque, nascetur.</p>
                                                         </section>
                                                         <!--End infrographic bignumber-->
                                                     </div>
-                                                    <div class="span3 moudle">
+                                                    <div class="span2 moudle">
                                                         <section class="infrographic bignumber ux-mod-nobg">
-                                                            <div class="bignumber-item theme-color-5" data-digit="1">0</div>
+                                                            <div class="bignumber-item theme-color-2" data-digit="1">0</div>
                                                             <h1 class="infrographic-tit">PHOTOGRAPHERS</h1>
-                                                            <p class="infrographic-subtit">Mattis tristique tincidunt
-                                                                porttitor enim, turpis scelerisque, nascetur.</p>
                                                         </section>
                                                         <!--End infrographic bignumber-->
                                                     </div>
-                                                    <div class="span3 moudle">
+                                                    <div class="span2 moudle">
                                                         <section class="infrographic bignumber ux-mod-nobg">
-                                                            <div class="bignumber-item theme-color-1" data-digit="2">0</div>
-                                                            <h1 class="infrographic-tit">ARTISTS</h1>
-                                                            <p class="infrographic-subtit">Mattis tristique tincidunt
-                                                                porttitor enim, turpis scelerisque, nascetur.</p>
+                                                            <div class="bignumber-item theme-color-5" data-digit="2">0</div>
+                                                            <h1 class="infrographic-tit">MAKEUP ARTISTS</h1>
+                                                        </section>
+                                                        <!--End infrographic bignumber-->
+                                                    </div>
+                                                    <div class="span2 moudle">
+                                                        <section class="infrographic bignumber ux-mod-nobg">
+                                                            <div class="bignumber-item theme-color-6" data-digit="2">0</div>
+                                                            <h1 class="infrographic-tit">STYLISTS</h1>
+                                                        </section>
+                                                        <!--End infrographic bignumber-->
+                                                    </div>
+                                                    <div class="span2 moudle">
+                                                        <section class="infrographic bignumber ux-mod-nobg">
+                                                            <div class="bignumber-item theme-color-7" data-digit="2">0</div>
+                                                            <h1 class="infrographic-tit">ILLUSTRATORS</h1>
                                                         </section>
                                                         <!--End infrographic bignumber-->
                                                     </div>
                                                 </div>
                                             </div>
-                                        <div class="pagebuilder-wrap">
+                                        <div class="pagebuilder-wrap" ng-controller="CreativesController">
+                                            <div class="container">
+                                                <div class="span12 moudle">
+                                                    <label>Search by Name: <input ng-model="searchName" style="width:100%"></label>
+                                                </div>
+                                            </div>
                                             <div class="fullwrap_moudle">
                                                 <div class="row-fluid">
                                                     <div id="" class="fullwidth-wrap bg-theme-color-10 parallax" style="background-position: 50% 0px;" data-speed="19">
-                                                        <div class="row-fluid">
+                                                        <div class="row-fluid" ng-repeat="data in dataholder| filter: searchName">
                                                             <div
                                                                 class="span12 moudle moudle_has_animation animation-default-ux animation-scroll-ux  bottom-space-no  animation_hidden fadeined"
-                                                                style="opacity: 1;">
+                                                                style="opacity: 1; margin-bottom:0;">
+
                                                                 <!--Portfolio interlock list-->
                                                                 <div class="interlock-list" data-post="20140403-072852-376">
                                                                     <a name="20140403-072852-376" class="20140403-072852-376"></a>
                                                                     <section
                                                                         class="interlock-item animation-default-ux animation-scroll-ux  fadeined">
-                                                                        <div class="iterlock-item-img">
+                                                                        <div class="iterlock-item-img" ng-if="$even">
                                                                             <a class="ux-hover-wrap" data-lightbox="post641"
-                                                                                href="creatives/courtneybragg/projects/TheMaoriNewYear/1.jpg"
-                                                                                style="background-image: url(creatives/courtneybragg/projects/TheMaoriNewYear/1.jpg)">
+                                                                                href="{{data.Path}}"
+                                                                                style="background-image: url({{data.Path}})">
                                                                                 <div class="blog-item-img-hover ux-hover-icon-wrap">
                                                                                     <i class="icon-m-view post-bgcolor-default"></i>
                                                                                 </div>
@@ -231,74 +287,41 @@
                                                                         </div>
                                                                         <div class="iterlock-caption">
                                                                             <a
-                                                                                href="creatives/courtneybragg/index.html"
-                                                                                title="COURTNEY BRAGG"><h2>COURTNEY BRAGG</h2></a>
+                                                                                href="{{data.Url}}"
+                                                                                title="{{data.Name}}"><h2>{{data.Name}}</h2></a>
                                                                             <div class="iterblock-expt hidden-phone">
-                                                                                <p>Studies Bachelor of Design at Massey University, Wellington.</p>
+                                                                                <p>{{data.Desc}}</p>
                                                                             </div>
                                                                             <ul class="blog_meta hidden-phone">
                                                                                 <li class="blog_meta_date"><i class="fa fa-calendar"></i>March
                                                                                     26 2014</li>
                                                                                 <li class="blog_meta_cate"><i class="fa fa-folder-o"></i><a
-                                                                                    href="http://ximudesign.com/aside/category/portfolio/branding/"
+                                                                                    href="#"
                                                                                     title="View all posts in BRANDING" rel="category tag">BRANDING</a>
                                                                                     / <a
-                                                                                    href="http://ximudesign.com/aside/category/portfolio/"
+                                                                                    href="#"
                                                                                     title="View all posts in PORTFOLIO" rel="category tag">PORTFOLIO</a>
                                                                                     / <a
-                                                                                    href="http://ximudesign.com/aside/category/uncategorized/"
+                                                                                    href="#"
                                                                                     title="View all posts in UNCATEGORIEZED"
                                                                                     rel="category tag">UNCATEGORIEZED</a></li>
                                                                                 <li class="blog_meta_cate"><i class="fa fa-tag"></i><a
-                                                                                    href="http://ximudesign.com/aside/tag/branding-2/"
+                                                                                    href="#"
                                                                                     rel="tag">Branding</a> / <a
-                                                                                    href="http://ximudesign.com/aside/tag/graphic-design/"
+                                                                                    href="#"
                                                                                     rel="tag">Graphic Design</a></li>
                                                                                 <li class="blog_meta_auhtor"><i class="fa fa-user"></i>admin</li>
                                                                             </ul>
                                                                             <!--End .blog_meta-->
                                                                         </div>
-                                                                    </section>
-                                                                    <section class="interlock-item animation-default-ux animation-scroll-ux  fadeined">
-                                                                        <div class="iterlock-item-img">
+                                                                        <div class="iterlock-item-img" ng-if="$odd">
                                                                             <a class="ux-hover-wrap" data-lightbox="post641"
-                                                                                href="creatives/daynamcc/front/3.jpg"
-                                                                                style="background-image: url(creatives/daynamcc/front/3.jpg)">
+                                                                                href="{{data.Path}}"
+                                                                                style="background-image: url({{data.Path}})">
                                                                                 <div class="blog-item-img-hover ux-hover-icon-wrap">
-                                                                                    <i class="icon-m-view bg-theme-color-10"></i>
+                                                                                    <i class="icon-m-view post-bgcolor-default"></i>
                                                                                 </div>
                                                                             </a>
-                                                                        </div>
-                                                                        <div class="iterlock-caption">
-                                                                            <a
-                                                                                href="creatives/daynamcc/index.html"
-                                                                                title="Nick Von K"><h2>Dayna Mcc</h2></a>
-                                                                            <div class="iterblock-expt hidden-phone">
-                                                                                <p>Her inspiration comes from the beauty that is found within all things.</p>
-                                                                            </div>
-                                                                            <ul class="blog_meta hidden-phone">
-                                                                                <li class="blog_meta_date"><i class="fa fa-calendar"></i>March
-                                                                                    26 2014</li>
-                                                                                <li class="blog_meta_cate"><i class="fa fa-folder-o"></i><a
-                                                                                    href="http://ximudesign.com/aside/category/portfolio/branding/"
-                                                                                    title="View all posts in BRANDING" rel="category tag">BRANDING</a>
-                                                                                    / <a
-                                                                                    href="http://ximudesign.com/aside/category/portfolio/illustration/"
-                                                                                    title="View all posts in ILLUSTRATION"
-                                                                                    rel="category tag">ILLUSTRATION</a> / <a
-                                                                                    href="http://ximudesign.com/aside/category/portfolio/"
-                                                                                    title="View all posts in PORTFOLIO" rel="category tag">PORTFOLIO</a></li>
-                                                                                <li class="blog_meta_cate"><i class="fa fa-tag"></i><a
-                                                                                    href="http://ximudesign.com/aside/tag/branding-2/"
-                                                                                    rel="tag">Branding</a> / <a
-                                                                                    href="http://ximudesign.com/aside/tag/graphic-design/"
-                                                                                    rel="tag">Graphic Design</a> / <a
-                                                                                    href="http://ximudesign.com/aside/tag/logo/" rel="tag">Logo</a>
-                                                                                    / <a href="http://ximudesign.com/aside/tag/pattern/"
-                                                                                    rel="tag">Pattern</a></li>
-                                                                                <li class="blog_meta_auhtor"><i class="fa fa-user"></i>admin</li>
-                                                                            </ul>
-                                                                            <!--End .blog_meta-->
                                                                         </div>
                                                                     </section>
                                                                 </div>
@@ -359,6 +382,5 @@
         <script type="text/javascript" src="./js/custom.theme.js"></script>
         <script type="text/javascript" src="./js/theme.pagebuilder.js"></script>
         <script type="text/javascript" src="./js/infographic.js"></script>
-
     </body>
 </html>

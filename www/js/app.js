@@ -29,18 +29,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','u
   // Each state's controller can be found in controllers.js
   $stateProvider
 
-
-
     .state('home', {
       url: '/home',
       abstract: true,
-      controller: 'DashCtrl',
-      templateUrl: function() {
-        // if (ionic.Platform.isAndroid()) {
-        //     return  "templates/home-android.html";
-        // }
-        return "templates/home.html";
-      }
+      templateUrl: "../lib/aside/index.html"
     })
 
     // setup an abstract state for the tabs directive

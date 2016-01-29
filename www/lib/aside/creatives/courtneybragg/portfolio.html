@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" ng-app="tgApp">
     <head>
         <title>SLIDER PORTFOLIO | TWO GURUZ</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -25,6 +25,16 @@
         <!-- Jquery Lib version 1.11.0 -->
         <script type="text/javascript" src="../../js/jquery.min.js"></script>
         
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
+        <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
+        <script src="../../js/angularjs/app.js"></script>
+
+        <link href="../../../../assets/owl-carousel/owl.carousel.css" rel="stylesheet">
+        <link href="../../../../assets/owl-carousel/owl.theme.css" rel="stylesheet">
+
         <!-- IE hack -->
         <!--[if lte IE 9]>
         <link rel='stylesheet' id='cssie'  href='./styles/ie.css' type='text/css' media='screen' />
@@ -152,8 +162,8 @@
                             <div id="content_wrap" class="">
                                 <div class="row-fluid gallery-wrap gallery-wrap-fullwidth ">
                                     <div class="gallery-images-wrap ">
-                                        <div class="row-fluid ">
-                                            <div class="clear gallery-post-wrap">
+                                        <div class="row-fluid">
+                                            <div class="clear gallery-post-wrap" ng-controller="PortfolioController">
                                                 <div class="gallery-wrap-slider ">
                                                     <!--galleria slider
                                                     data-crop: fit: flase, fill: true
@@ -161,8 +171,9 @@
                                                     data-interval: timer
                                                     -->
                                                     <div class="galleria" data-crop="false" data-transition="fade" data-interval="5000">
-                                                        <img src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/04/Reacciónes-1.jpg">
-                                                        <img src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/04/Reacciónes-3.jpg">
+                                                        <div ng-repeat="work in workholder" ng-if="$index == index_num">
+                                                            <img ng-repeat="imgs in work.imgs" ng-src="{{imgs.src}}">
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="gallery-info-wrap container">
@@ -170,7 +181,7 @@
                                                         <div id="title-wrap">
                                                             <div class="title-wrap-inn">
                                                                 <div id="main-title">
-                                                                    <h1 class="main-title">REACCIONES.</h1>
+                                                                    <h1 class="main-title" ng-repeat="work in workholder" ng-if="$index == 0">{{work.title}}</h1>
                                                                     <div class="post-meta">
                                                                         <span class="post-meta-unit date">Date: April 1 2014</span>
                                                                         <span class="post-meta-unit tag">Tags: <a
@@ -219,90 +230,18 @@
                                                 </div>
                                                 <!--end gallery-info-wrap -->
                                             </div>
-                                            <section class="related-post-wrap clearfix">
-                                                <h2 class="related-post-wrap-tit">Related Posts</h2>
-                                                <div class="row-fluid">
-                                                    <section class="related-post-unit">
-                                                        <a
-                                                            href="http://ximudesign.com/aside/2014/03/28/negative-space-animal-masterpieces/"
-                                                            title="GAME CHANGERS"> <img width="800" height="480"
-                                                            src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/03/Game-Changers-1-800x480-1398158065.png"
-                                                            class="attachment-image-thumb wp-post-image"
-                                                            alt="GAME CHANGERS">
-                                                        </a>
-                                                        <h3>
-                                                            <a
-                                                                href="http://ximudesign.com/aside/2014/03/28/negative-space-animal-masterpieces/"
-                                                                title="GAME CHANGERS">GAME CHANGERS</a>
-                                                        </h3>
-                                                        <div class="related-post-caption hidden-phone">
-                                                            <p>Scelerisque et pulvinar eros tempor, mattis arcu
-                                                                auctor.</p>
-                                                        </div>
-                                                    </section>
-                                                    <!--End relatedpost-unit-->
-                                                    <section class="related-post-unit">
-                                                        <a href="http://ximudesign.com/aside/2014/04/02/igloo/"
-                                                            title="HIPSTER WIZARD"> <img width="800" height="480"
-                                                            src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/04/Hipster-Wizard-0-800x480-1398154313.jpg"
-                                                            class="attachment-image-thumb wp-post-image"
-                                                            alt="HIPSTER WIZARD">
-                                                        </a>
-                                                        <h3>
-                                                            <a href="http://ximudesign.com/aside/2014/04/02/igloo/"
-                                                                title="HIPSTER WIZARD">HIPSTER WIZARD</a>
-                                                        </h3>
-                                                        <div class="related-post-caption hidden-phone">
-                                                            <p>Natoque lacus, arcu ridiculus nec platea vel enim? Duis
-                                                                scelerisque dolor.</p>
-                                                            <p>In mattis pulvinar! Magna? Nunc augue ridiculus? Sociis
-                                                                pid cras.</p>
-                                                        </div>
-                                                    </section>
-                                                    <!--End relatedpost-unit-->
-                                                    <section class="related-post-unit">
-                                                        <a
-                                                            href="http://ximudesign.com/aside/2014/03/26/portfolio-post-with-vertical-list-left-content/"
-                                                            title="VERTICAL LIST PORTFOLIO LEFT CONTENT"> <img
-                                                            width="800" height="480"
-                                                            src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/04/didelis-web2-800x480.jpg"
-                                                            class="attachment-image-thumb wp-post-image"
-                                                            alt="VERTICAL LIST PORTFOLIO LEFT CONTENT">
-                                                        </a>
-                                                        <h3>
-                                                            <a
-                                                                href="http://ximudesign.com/aside/2014/03/26/portfolio-post-with-vertical-list-left-content/"
-                                                                title="VERTICAL LIST PORTFOLIO LEFT CONTENT">VERTICAL
-                                                                LIST PORTFOLIO LEFT CONTENT</a>
-                                                        </h3>
-                                                        <div class="related-post-caption hidden-phone">
-                                                            <p>Mus ac massa et, adipiscing quis quis duis et odio eu.
-                                                                Lectus amet urna, ac ridiculus est non porttitor sed elit
-                                                                arcu? Magna et.</p>
-                                                        </div>
-                                                    </section>
-                                                    <!--End relatedpost-unit-->
-                                                    <section class="related-post-unit">
-                                                        <a
-                                                            href="http://ximudesign.com/aside/2014/03/26/portfolio-post-with-slider/"
-                                                            title="MOVEMBER"> <img width="800" height="480"
-                                                            src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/04/Short-Film-Poster-Design-1-800x480.jpg"
-                                                            class="attachment-image-thumb wp-post-image" alt="MOVEMBER">
-                                                        </a>
-                                                        <h3>
-                                                            <a
-                                                                href="http://ximudesign.com/aside/2014/03/26/portfolio-post-with-slider/"
-                                                                title="MOVEMBER">MOVEMBER</a>
-                                                        </h3>
-                                                        <div class="related-post-caption hidden-phone">
-                                                            <p>Nec facilisis in sagittis etiam.</p>
-                                                        </div>
-                                                    </section>
-                                                    <!--End relatedpost-unit-->
+
+
+                                            <div class="container" ng-controller="PortfolioController">
+                                                <div id="owl-demo" class="owl-carousel owl-theme">
+                                                    <div class="item" ng-repeat="work in workholder">
+                                                        <img ng-src="{{work.imgs[0].src}}" class="img-responsive"></img>
+                                                        <a ng-click="changeIndex(1)" href="#"
+                                                            title="">{{work.title}}</a></div>
+                                                    </div>
                                                 </div>
-                                                <!--end row-fluid-->
-                                            </section>
-                                            <!--End related-post-erap-->
+                                            </div>
+
                                             <div class="container comment-wrap">
                                                 <div id="comments">
                                                     <div id="respondwrap">
@@ -392,7 +331,64 @@
             <div id="float-bar-triggler"><i class="float-bar-triggler-inn"></i></div> 
         </div>
         <!--End #float bar-->
-    
+        <script src="../../../../assets/owl-carousel/js/jquery-1.9.1.min.js"></script> 
+        <script src="../../../../assets/owl-carousel/owl.carousel.js"></script>
+        <style>
+        #owl-demo img{ height:auto !important;}
+        #owl-demo .item{
+          vertical-align:middle;
+          padding: 30px 0px;
+          margin: 10px;
+          color: #FFF;
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          border-radius: 3px;
+          text-align: center;
+        }
+        .customNavigation{
+          visibility: hidden;
+          text-align: center;
+        }
+        //use styles below to disable ugly selection
+        .customNavigation a{
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        </style>
+        <script>
+        $(document).ready(function() {
+         
+          var owl = $("#owl-demo");
+         
+          owl.owlCarousel({
+              items : 6, //10 items above 1000px browser width
+              itemsDesktop : [1000,6], //5 items between 1000px and 901px
+              itemsDesktopSmall : [900,3], // betweem 900px and 601px
+              itemsTablet: [600,2], //2 items between 600 and 0
+              itemsMobile : false //false // itemsMobile disabled - inherit from itemsTablet option
+          });
+         
+          // Custom Navigation Events
+          $(".next").click(function(){
+            owl.trigger('owl.next');
+          })
+          $(".prev").click(function(){
+            owl.trigger('owl.prev');
+          })
+          $(".play").click(function(){
+            owl.trigger('owl.play',1000); //owl.play event accept autoPlay speed as second parameter
+          })
+          $(".stop").click(function(){
+            owl.trigger('owl.stop');
+          })
+         
+        });
+        </script>
+
         <script type="text/javascript" src="../../js/bootstrap.js"></script>
         <script type="text/javascript" src="../../js/galleria/galleria-1.3.5.js?ver=1.3.5"></script>
         <script type="text/javascript" src="../../js/galleria/themes/classic/galleria.classic.min.js?ver=1.3.5"></script>
