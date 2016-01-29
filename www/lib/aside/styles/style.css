@@ -68,6 +68,11 @@ version 3.0 (http://www.gnu.org/licenses/gpl-3.0.html)
 --------------------------------
 */
 
+#main-wrap p {
+            font-size:1.5em;
+        }
+
+
 
 /* --------------------------------
     0. General & Reset  
@@ -82,7 +87,7 @@ a, a:hover, a:focus{ text-decoration:none;outline:none; }
 ol, ul { list-style: none;outline:none; }
 ul{ margin-left:0;}
 li{ list-style:none}
-body,input[type="text"],textarea,div.bbp-template-notice p,legend{ font-size:12px; font-size:1.2rem; font-family: 'Roboto', 'sans-serif'; font-style: normal;  }
+body,input[type="text"],textarea,div.bbp-template-notice p,legend{font-size:12px; font-size:1.2rem;/*Yasu font-size:16px; font-size:1.6em;*/ font-family: 'Roboto', 'sans-serif'; font-style: normal;  }
 h1,h2,h3,h4,h5,h6 { line-height:20px; font-family: 'Roboto', 'sans-serif'; font-weight: 300; font-style: normal; }
 input,button,select,textarea{ font-family: 'Roboto', 'sans-serif'; }
 h1 { line-height:60px;}
@@ -1446,8 +1451,8 @@ span.wpcf7-not-valid-tip{ left:10px; top:-8px; border:none; background:none; col
 .fixed_column{ display:inline-block; vertical-align:top; }
 
 /*first-letter*/
-
-.dropcap { float: left; font-size: 40px; line-height: 40px; padding-right: 8px; }
+/*Yasu*/
+.dropcap { /*float: left;*/ font-size: 40px; line-height: 40px; padding-right: 8px; }
 
 /*buttons*/
 

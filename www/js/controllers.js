@@ -1,6 +1,17 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {
+// .controller('TestCtrl',function($scope, $location, $state) {
+
+//     $scope.testMove = function(scope, location, state) {
+//         console.log("Button was pressed!");
+//         state.go('/tab.home');
+//     }
+// })
+
+.controller('DashCtrl', function($scope, $state) {
+	$scope.goto = function(state){
+		$state.go(state);
+	}
 })
 
 .controller('FriendsCtrl', function($scope, Friends) {
