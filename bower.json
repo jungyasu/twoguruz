@@ -1,0 +1,22 @@
+{
+  "name": "twoguruz",
+  "description": "Twoguruz fullstack heroku app",
+  "main": "server.js",
+  "authors": [
+    "Yasu Jung <yoseok.jung@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "www.twoguruz.com",
+  "dependencies": {
+  	"angular": "latest",
+  	"bootstrap": "latest",
+  	"angular-route": "latest",
+  	"angular-bootstrap": "latest",
+  	"angular-resource": "latest",
+  	"angular-socket-io": "latest"
+  },
+  "install": {
+  	"path": "client/libs"
+  }
+}
