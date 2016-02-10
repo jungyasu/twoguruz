@@ -1,0 +1,156 @@
+<div id="post-151" class="post-151 post type-post status-publish format-gallery has-post-thumbnail hentry category-blog category-illustration category-portfolio category-uncategorized tag-digital-art tag-illustration-2">
+                            <div id="content_wrap" class="">
+                                <div class="row-fluid gallery-wrap gallery-wrap-fullwidth">
+                                    <div class="gallery-images-wrap ">
+                                        <div class="row-fluid">
+                                            <div class="clear gallery-post-wrap">
+                                                <div class="gallery-wrap-slider ">
+                                                    <!--galleria slider
+                                                    data-crop: fit: flase, fill: true
+                                                    data-transition: fade, slide
+                                                    data-interval: timer
+                                                    -->
+                                                    <div class="galleria" data-crop="false" data-transition="fade" data-interval="5000">
+                                                        <div ng-repeat="work in workholder" ng-if="$index == index_num">
+                                                            <img ng-repeat="imgs in work.imgs" ng-src="{{imgs.src}}">
+                                                        </div>
+                                                            <!-- <img ng-repeat="imgs in selectedImg.src" ng-src="{{imgs.src}}"> -->
+                                                    </div>
+                                                </div>
+                                                <div class="gallery-info-wrap container">
+                                                    <div class="title-bar-wrap " id="title-bar">
+                                                        <div id="title-wrap">
+                                                            <div class="title-wrap-inn">
+                                                                <div id="main-title">
+                                                                    <h1 class="main-title" ng-repeat="work in workholder"  ng-if="$index == index_num">{{work.title}}</h1>
+                                                                    <div class="post-meta">
+                                                                        <span class="post-meta-unit date">Date: April 1 2014</span>
+                                                                        <span class="post-meta-unit tag">Tags: <a
+                                                                            href="http://ximudesign.com/aside/tag/digital-art/"
+                                                                            rel="tag">Digital Art</a>, <a
+                                                                            href="http://ximudesign.com/aside/tag/illustration-2/"
+                                                                            rel="tag">Illustration</a></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--End #title-wrap-->
+                                                    </div>
+                                                    <!--End #title-bar-wrap"-->
+                                                    <div class="row-fluid" ng-repeat="work in workholder" ng-if="$index == index_num">
+                                                        <div class="entry span9">
+                                                            <p>
+                                                                 {{work.desc}}
+                                                            </p>
+                                                        </div>
+                                                        <!--end entry-->
+                                                        <ul class="gallery-info-property span3">
+                                                            <li><span class="gallery-info-property-tit">Author:</span>
+                                                                <span><a href="https://www.behance.net/gstv">{{work.author}}</a></span></li>
+                                                            <li><span class="gallery-info-property-tit">Project:</span>
+                                                                <span><a
+                                                                    href="https://www.behance.net/gallery/Reacciones/10702889">Reacciónes.</a></span>
+                                                            </li>
+                                                            <li><span class="gallery-info-property-tit date">Date:
+                                                            </span> <span>April 1 2014</span></li>
+                                                            <li><span class="gallery-info-property-tit tag">Tags:
+                                                            </span> <span><a
+                                                                    href="http://ximudesign.com/aside/tag/digital-art/"
+                                                                    rel="tag">Digital Art</a>, <a
+                                                                    href="http://ximudesign.com/aside/tag/illustration-2/"
+                                                                    rel="tag">Illustration</a></span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!--end gallery-info-wrap -->
+                                            </div>
+
+
+                                            <div class="container">
+                                                <div id="owl-demo" class="owl-carousel owl-theme">
+                                                    <div class="item" ng-repeat="work in workholder">
+                                                        <img ng-src="{{work.imgs[0].src}}" class="img-responsive"></img>
+                                                        <a ng-click="changeIndex($index); selectedWork.src = work.imgs; myFilter = { title : 'SALT' }"  href="#"
+                                                            title="">{{work.title}}</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="galleria" ng-repeat="work in workholder" ng-if="$index == index_num">
+                                                    <img ng-repeat="imgs in work.imgs" ng-src="{{imgs.src}}">
+                                                    <img ng-repeat="srcs in selectedWork.src" ng-src="{{srcs.src}}">
+                                            </div> -->
+                                            <!-- <img ng-repeat="srcs in selectedWork.src" ng-src="{{srcs.src}}"> -->
+
+                                            <!-- <div class="container">
+                                                <div id="owl-demo" class="owl-carousel owl-theme">
+                                                    <div class="item" ng-repeat="work in workholder">
+                                                        <img ng-src="{{work.imgs[0].src}}" class="img-responsive"></img>
+                                                        <a ng-click="selectedImg.src = work.imgs[0].src" href="#"
+                                                            title="">{{work.title}}</a></div>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+
+                                            <div class="container comment-wrap">
+                                                <div id="comments">
+                                                    <div id="respondwrap">
+                                                        <div id="respond" class="comment-respond">
+                                                            <h3 id="reply-title" class="comment-reply-title">
+                                                                <span class="comm-reply-title">LEAVE A COMMENT</span> <small><a
+                                                                    rel="nofollow" id="cancel-comment-reply-link"
+                                                                    href="/aside/2014/04/01/concrete-cross/#respond"
+                                                                    style="display: none;">CANCEL REPLY</a></small>
+                                                            </h3>
+                                                            <form
+                                                                action="http://ximudesign.com/aside/wp-comments-post.php"
+                                                                method="post" id="commentform" class="comment-form">
+                                                                <p class="span6">
+                                                                    <input id="author" name="author" type="text"
+                                                                        class="requiredFieldcomm" value="NAME" size="30"
+                                                                        aria-required="true" tabindex="1"
+                                                                        onfocus="if(this.value=='NAME'){this.value='';}"
+                                                                        onblur="if(this.value==''){this.value='NAME';}">
+                                                                </p>
+                                                                <p class="span6">
+                                                                    <input id="email" name="email" type="text"
+                                                                        class="email requiredFieldcomm" value="EMAIL" size="30"
+                                                                        aria-required="true" tabindex="2"
+                                                                        onfocus="if(this.value=='EMAIL'){this.value='';}"
+                                                                        onblur="if(this.value==''){this.value='EMAIL';}">
+                                                                </p>
+                                                                <p>
+                                                                    <textarea id="comment" name="comment"
+                                                                        class="requiredFieldcomm" cols="100%" tabindex="4"
+                                                                        aria-required="true"
+                                                                        onfocus="if(this.value==this.defaultValue){this.value='';}"
+                                                                        onblur="if(this.value==''){this.value=this.defaultValue;}">YOU REVIEW</textarea>
+                                                                </p>
+                                                                <p class="form-submit">
+                                                                    <input name="submit" type="submit" id="submit" value="SEND">
+                                                                    <input type="hidden" name="comment_post_ID" value="151"
+                                                                        id="comment_post_ID"> <input type="hidden"
+                                                                        name="comment_parent" id="comment_parent" value="0">
+                                                                </p>
+                                                            </form>
+                                                        </div>
+                                                        <!-- #respond -->
+                                                    </div>
+                                                </div>
+                                                <!-- #comments -->
+                                            </div>
+                                        </div>
+                                        <!--end row-fluid-->
+                                    </div>
+                                    <!--end gallery-images-wrap -->
+                                </div>
+                                <!--end row-fluid gallery-wrap-->
+                            </div>
+                            <!--end content_wrap-->
+                        </div>
+                        <!--end post-->
+                        <script type="text/javascript">
+                            jQuery(document).ready(function(){
+                                var ux_pb = new ThemePageBuilder();
+                                ux_pb.init();
+                            });
+                        </script>

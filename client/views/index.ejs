@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="tgApp">
+    <head>
+        <title>TWO GURUZ</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <!-- Mobile Specific Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" href="img/favicon.ico">
+        
+        <!-- Google fonts styles -->
+        <link rel="stylesheet" id="google-fonts-Roboto-css" href="http://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C700%2C700italic%2C900%2C900italic&amp;ver=3.9.1" type="text/css" media="all">
+        <link rel="stylesheet" id="google-fonts-Playfair+Display-css" href="http://fonts.googleapis.com/css?family=Playfair+Display%3Aregular%2Citalic%2C700%2C700italic%2C900%2C900italic&amp;ver=3.9.1" type="text/css" media="all">
+
+        <!-- Aside styles -->
+        <link rel="stylesheet" id="bootstrap-css" href="assets/styles/bootstrap.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" id="pagebuild-css" href="assets/styles/pagebuild.css" type="text/css" media="screen">
+        <link rel="stylesheet" id="ux-aside-css" href="assets/styles/style.css" type="text/css" media="screen">
+        <link rel="stylesheet" id="icons-css" href="assets/styles/icons.css" type="text/css" media="screen">
+        <link rel="stylesheet" id="lightbox-css" href="assets/js/lightbox/css/lightbox.css" type="text/css" media="screen">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.transitions.min.css" />
+        <script type="javascript" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js" /></script>
+        <!--<script data-require="angular.js@1.3.x" src="https://code.angularjs.org/1.3.15/angular.js" data-semver="1.3.15"></script>-->
+        <script data-require="jquery@2.1.3" data-semver="2.1.3" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+        
+        
+        <!-- Jquery Lib version 1.11.0 -->
+        <!--<script type="text/javascript" src="assets/js/jquery.min.js"></script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+        <!-- Latest compiled and minified CSS -->
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+        
+    </head>
+    <body class="home page page-template-default responsive-ux boxed-line aside-layout-ux">
+        <!-- Page Loading -->
+        <div class="page-loading visible">
+            <div class="page-loading-inn">
+                <div class="page-loading-transform">
+                    <div class="ux-loading"></div>
+                    <div class="ux-loading-transform">
+                        <div class="loading-dot1">&nbsp;</div>
+                        <div class="loading-dot2">&nbsp;</div>
+                    </div>
+                    <div class="site-loading-logo centered-ux">TWO GURUZ</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jplayer -->
+        <div id="jquery_jplayer" class="jp-jplayer"></div>
+        
+        <!--Mobile Header meta-->
+        <div id="mobile-header-meta">
+            
+            <!--Search Form-->
+            <form id="search_form" name="" method="get" class="search-form_header" action="http://ximudesign.com/aside/">
+                <input type="text" onblur="if (this.value == '') {this.value = 'SEARCH';}" onfocus="if (this.value == 'SEARCH') {this.value = '';}" id="s" name="s" value="SEARCH" class="textboxsearch">
+                <span class="submit-wrap">
+                    <input type="submit" value="" class="submitsearch" name="submitsearch">
+                    <i class="fa fa-long-arrow-right middle-ux"></i>
+                </span>
+            </form>
+    
+            <!--Social icons-->
+           <div class="social-icons-sidebar">
+                <a class="icons-sidebar-unit" href="https://twitter.com/twoguruz" title="Follow us"><i class="fa fa-twitter-square"></i></a>
+                <a class="icons-sidebar-unit" href="https://www.facebook.com/twoguru/" title="Follow us"><i class="fa fa-facebook-square"></i></a>
+                <a class="icons-sidebar-unit" href="#" title=""><i class="fa fa-google-plus-square"></i></a>
+                <a class="icons-sidebar-unit" href="https://www.youtube.com/" title=""><i class="fa fa-youtube-square"></i></a>
+            </div>
+
+            <div class="mobile-meta-con">
+                <div class="copyright">&copy; 2016 twoguruz.com</div>
+            </div>
+            <!--End header-info-mobile-->
+
+        </div>
+        <!--End mobile-header-meta-->
+        <div id="wrap">
+            <!--Sidebar-->
+            <aside id="sidebar" ng-class="{'sidebar_show':isActive('/')}" ng-controller="navController">
+                <div id="sidebar-trigger">
+                    <div class="menu-icon"><i class="icon-m-menu"></i></div>
+                </div>
+                <!--End sidebar-trigger-->
+                <div class="sidebar-main">
+                      
+                    <!--Logo-->
+                    <h1 id="logo"><a href="index.html" title="TWO GURUZ">TWO GURUZ</a></h1>
+
+                    <!--Menu-->
+                    <nav id="navi" class="clearfix">
+                        <div id="navi_wrap" class="menu-demo-menu-container">
+                            <ul class="menu">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" ng-class="{'current-menu-item': isActive('/')}">
+                                    <a href="/">HOME</a>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" ng-class="{'current-menu-item': isActive('/client')}">
+                                    <a href="/client">CLIENTS</a>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" ng-class="{'current-menu-item': isActive('/creative')}">
+                                    <a href="/creative">CREATIVES</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children" ng-class="{'current-menu-item': isActive('/service')}">
+                                    <a href="/service">SERVICES</a>
+                                </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children" ng-class="{'current-menu-item': isActive('/contact')}">
+                                    <a href="/contact">CONTACT</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--End #navi_wrap-->
+                    </nav>
+                    <!-- End Menu -->
+                    <div class="sidebar-bottom-wrap">
+                        <!--Search bar-->
+                        <form id="search_form_1" name="" method="get" class="search-form_header" action="#">
+                            <input type="text" onblur="if (this.value == '') {this.value = 'SEARCH';}" onfocus="if (this.value == 'SEARCH') {this.value = '';}" id="search" name="search" value="SEARCH" class="textboxsearch">
+                            <span class="submit-wrap"><input type="submit" value="" class="submitsearch" name="submitsearch"><i class="fa fa-long-arrow-right middle-ux"></i></span>
+                        </form>
+                        <!--Social icons-->
+                        <div class="social-icons-sidebar">
+                            <a class="icons-sidebar-unit" href="https://twitter.com/twoguruz" title="Follow us"><i class="fa fa-twitter-square"></i></a>    
+                            <a class="icons-sidebar-unit" href="https://www.facebook.com/twoguru/" title="Follow us"><i class="fa fa-facebook-square"></i></a>
+                            <a class="icons-sidebar-unit" href="https://plus.google.com/" title=""><i class="fa fa-google-plus-square"></i></a>
+                            <a class="icons-sidebar-unit" href="https://www.youtube.com/" title=""><i class="fa fa-youtube-square"></i></a>
+                        </div>
+                        <!--Copyright-->
+                        <div class="copyright">&copy; 2016 twoguruz.com</div>
+                        <!--End copyright-->
+                    </div>
+                    <!--END sidebar-bottom-wrap-->
+                </div>
+                <!--end sidebar-main-->
+            </aside>
+            <!--Header-->
+            <header id="header">
+                <h1 id="logo-mobile"><a href="index.html" title="TWO GURUZ">TWO GURUZ</a></h1>
+            </header>
+            <!--End Header-->
+            <!--#main-wrap-->
+
+            <div id="main-wrap">
+                <div id="main">
+                    <div id="content">
+                        <!--ng-view -->
+                        <div ng-view></div>
+                        
+                    </div>
+                    <!--end content-->
+                </div>
+                <!--End #main-->        
+            </div>
+            <!--End #main-wrap-->
+        </div><!--End #wrap-->
+        <div id="float-bar" class="hidden-phone">
+            <div class="float-bar-inn-wrap">
+                <div class="float-bar-inn">
+                    <!--Social network share icon-->
+                    <div class="float-bar-social-share">
+                        <button class="social-share-facebook" onclick="javascript:window.open('http://www.facebook.com/share.php?u=http://twoguruz.com','', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-facebook"></i></button>
+                        <button class="social-share-twitter" onclick="javascript:window.open('https://twitter.com/share?url=http://twoguruz.com','', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-twitter"></i></button>
+                        <button class="social-share-google-plus" onclick="javascript:window.open('https://plus.google.com/share?url=http://twoguruz.com','', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-google-plus"></i></button>
+                        <button class="social-share-pinterest" onclick="javascript:window.open('http://pinterest.com/pin/create/bookmarklet/?url=http://twoguruz.com','', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-pinterest"></i></button>
+                        <button class="social-share-linkedin" onclick="javascript:window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://twoguruz.com','', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-linkedin"></i></button>
+                    </div>
+                </div>
+                <!--End float inn wrap-->
+            </div><!--End float inn-->
+            <div id="float-bar-triggler"><i class="float-bar-triggler-inn"></i></div> 
+        </div>
+        <!--End #float bar-->
+
+        
+
+        <!--Angular JS-->
+        <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>-->
+        <!-- // <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.min.js"></script> -->
+        <!-- // <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-cookies.min.js"></script> -->
+        <!-- // <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-resource.min.js"></script> -->
+        <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>-->
+        <!-- // <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.min.js"></script> -->
+        <!-- // <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-touch.min.js"></script> -->
+
+        <!-- tgApp main app.js -->
+        <script src="libs/angular/angular.js"></script>
+        <script src="libs/angular-route/angular-route.js"></script>
+        <script src="js/app.js"></script>
+
+        <!-- controllers -->
+
+        <script src="js/controllers/homeController.js"></script>
+        <script src="js/controllers/navController.js"></script>
+        <script src="js/controllers/serviceController.js"></script>
+        <script src="js/controllers/clientController.js"></script>
+        <script src="js/controllers/creativeController.js"></script>
+        <script src="js/controllers/contactController.js"></script>
+
+        <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"> </script>
+        <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="assets/js/lightbox/js/lightbox.min.js"></script>
+        <script type="text/javascript" src="assets/js/waypoints.min.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.flexslider-min.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.jplayer.min.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.gray.min.js"></script>
+        <script type="text/javascript" src="assets/js/main.js"></script>
+        <script type="text/javascript" src="assets/js/custom.theme.isotope.js"></script>
+        <script type="text/javascript" src="assets/js/custom.theme.js"></script>
+        <script type="text/javascript" src="assets/js/theme.pagebuilder.js"></script>
+        <script type="text/javascript" src="assets/js/infographic.js"></script>
+
+        <script src="assets/owl-carousel/owl.carousel.js"></script>
+        
+        
+    </body>
+</html>
