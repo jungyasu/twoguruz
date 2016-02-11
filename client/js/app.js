@@ -15,6 +15,9 @@ var tgApp = angular.module('tgApp', [
         
         //if no valid routes are found, redirect to /home
         $routeProvider.otherwise({redirectTo: '/'});
+        
+        //reload refresh once
+        
         //new comment
         $locationProvider.html5Mode({enabled: true, requireBase: false});
     }])
