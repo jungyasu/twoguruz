@@ -4,6 +4,6 @@ tgApp.controller('navController', ['$scope', '$location', function($scope, $loca
     }
 
     $location.onload = function() {
-        $location.reload();
+        $location.reload(true);
     }
 }])

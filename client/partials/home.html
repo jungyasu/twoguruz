@@ -314,9 +314,15 @@
                             //     }
                             // }
                             window.onload = function () {
-                                if (! localStorage.justOnce) {
-                                    localStorage.setItem("justOnce", "true");
-                                    window.location.reload();
-                                }
+                                if( window.localStorage )
+                                  {
+                                    if( !localStorage.getItem( 'firstLoad' ) )
+                                    {
+                                      localStorage[ 'firstLoad' ] = true;
+                                      window.location.reload();
+                                    }  
+                                    else
+                                      localStorage.removeItem( 'firstLoad' );
+                                  }
                             }
                         </script>
