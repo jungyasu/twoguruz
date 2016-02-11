@@ -155,10 +155,4 @@
                                 var ux_pb = new ThemePageBuilder();
                                 ux_pb.init();
                             });
-                            window.onload = function () {
-                                if (! localStorage.justOnce) {
-                                    localStorage.setItem("justOnce", "true");
-                                    window.location.reload();
-                                }
-                            }
                         </script>
