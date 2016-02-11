@@ -1,4 +1,4 @@
-<div id="post-119" class="page type-page status-publish hentry">
+<div class="page type-page status-publish hentry">
                             <div class="row-fluid " style="min-height: 799px;">
                                 <div id="content_wrap" class="">
                                     <div class="content-wrap-inn bottom-space ">
@@ -103,9 +103,8 @@
                                             <div class="container">
                                                 <div class="row-fluid">
                                                     <div class="span12 moudle bottom-space-20 ">
-                                                        <div data-post="20140404-035001-930-9"
+                                                        <div
                                                             class="text_block ux-mod-nobg ">
-                                                            <a name="20140404-035001-930-9" class="20140404-035001-930-9"></a>
                                                             <p></p>
                                                             <h3>TOOLS</h3>
                                                             <p></p>
@@ -128,7 +127,6 @@
                                                 <div class="row-fluid">
                                                     <div class="span12 moudle bottom-space-60 ">
                                                         <div class="promote-wrap promote-wrap-2c">
-                                                            <a name="20140425-002959-938" class="20140425-002959-938"></a>
                                                             <div class="promote-text" style="margin-right: 155px;">
                                                                 <h4 class="promote-big">FEATURED BY TWO GURUZ</h4>
                                                                 <p class="promote-medium">
@@ -158,9 +156,9 @@
                                 var ux_pb = new ThemePageBuilder();
                                 ux_pb.init();
                             });
-                            window.onload = function() {
-                                if(!window.location.hash) {
-                                    window.location = window.location + '#loaded';
+                            window.onload = function () {
+                                if (! localStorage.justOnce) {
+                                    localStorage.setItem("justOnce", "true");
                                     window.location.reload();
                                 }
                             }

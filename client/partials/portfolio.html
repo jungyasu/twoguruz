@@ -1,4 +1,4 @@
-<div id="post-151" class="post-151 post type-post status-publish format-gallery has-post-thumbnail hentry category-blog category-illustration category-portfolio category-uncategorized tag-digital-art tag-illustration-2">
+<div class="post type-post status-publish format-gallery has-post-thumbnail hentry category-blog category-illustration category-portfolio category-uncategorized tag-digital-art tag-illustration-2">
                             <div id="content_wrap" class="">
                                 <div class="row-fluid gallery-wrap gallery-wrap-fullwidth">
                                     <div class="gallery-images-wrap ">
@@ -161,9 +161,9 @@
                                 var ux_pb = new ThemePageBuilder();
                                 ux_pb.init();
                             });
-                            window.onload = function() {
-                                if(!window.location.hash) {
-                                    window.location = window.location + '#loaded';
+                            window.onload = function () {
+                                if (! localStorage.justOnce) {
+                                    localStorage.setItem("justOnce", "true");
                                     window.location.reload();
                                 }
                             }

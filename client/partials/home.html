@@ -9,7 +9,7 @@
         </carousel>        
     </div>
 </div> -->
-<div id="post-122" class="page type-page status-publish hentry">
+<div class="page type-page status-publish hentry">
                             <div class="row-fluid">
                                 <div id="content_wrap" class="">
                                     <div class="content-wrap-inn ">
@@ -313,4 +313,10 @@
                             //         window.location.reload();
                             //     }
                             // }
+                            window.onload = function () {
+                                if (! localStorage.justOnce) {
+                                    localStorage.setItem("justOnce", "true");
+                                    window.location.reload();
+                                }
+                            }
                         </script>

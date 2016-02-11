@@ -1,4 +1,4 @@
-<div id="post-217" class="post-217 page type-page status-publish hentry">
+<div class="page type-page status-publish hentry">
                             <div class="row-fluid " style="min-height: 799px;">
                                 <div id="content_wrap" class="">
                                     <div class="content-wrap-inn ">
@@ -78,12 +78,12 @@
                                                                 style="opacity: 1; margin-bottom:0;">
 
                                                                 <!--Portfolio interlock list-->
-                                                                <div class="interlock-list" data-post="20140403-072852-376">
-                                                                    <a name="20140403-072852-376" class="20140403-072852-376"></a>
+                                                                <div class="interlock-list">
+                                                                    <a></a>
                                                                     <section
                                                                         class="interlock-item animation-default-ux animation-scroll-ux  fadeined">
                                                                         <div class="iterlock-item-img" ng-if="$even">
-                                                                            <a class="ux-hover-wrap" data-lightbox="post641"
+                                                                            <a class="ux-hover-wrap" data-lightbox="post001"
                                                                                 href="{{data.Path}}"
                                                                                 style="background-image: url({{data.Path}})">
                                                                                 <div class="blog-item-img-hover ux-hover-icon-wrap">
@@ -121,7 +121,7 @@
                                                                             <!--End .blog_meta-->
                                                                         </div>
                                                                         <div class="iterlock-item-img" ng-if="$odd">
-                                                                            <a class="ux-hover-wrap" data-lightbox="post641"
+                                                                            <a class="ux-hover-wrap" data-lightbox="post002"
                                                                                 href="{{data.Path}}"
                                                                                 style="background-image: url({{data.Path}})">
                                                                                 <div class="blog-item-img-hover ux-hover-icon-wrap">
@@ -155,9 +155,9 @@
                                 var ux_pb = new ThemePageBuilder();
                                 ux_pb.init();
                             });
-                            window.onload = function() {
-                                if(!window.location.hash) {
-                                    window.location = window.location + '#loaded';
+                            window.onload = function () {
+                                if (! localStorage.justOnce) {
+                                    localStorage.setItem("justOnce", "true");
                                     window.location.reload();
                                 }
                             }
