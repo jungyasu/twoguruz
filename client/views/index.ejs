@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" ng-app="tgApp">
+<html lang="en-US" ng-app="tgApp" ng-class="{'overflow-hidden':isActive('/contact')}" ng-controller="navController">
     <head>
         <title>TWO GURUZ</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -37,6 +37,12 @@
 
         <!-- Latest compiled and minified CSS -->
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+
+        <style>
+            .overflow-hidden{
+                overflow:hidden;
+            }
+        </style>
         
     </head>
     <body class="home page page-template-default responsive-ux boxed-line aside-layout-ux">
@@ -86,7 +92,7 @@
         <!--End mobile-header-meta-->
         <div id="wrap">
             <!--Sidebar-->
-            <aside id="sidebar" class="sidebar_hide" ng-controller="navController">
+            <aside id="sidebar" ng-class="{'sidebar_show':isActive('/')}"> <!-- ng-controller="navController"-->
                 <div id="sidebar-trigger">
                     <div class="menu-icon"><i class="icon-m-menu"></i></div>
                 </div>
@@ -217,6 +223,9 @@
         <script type="text/javascript" src="assets/js/custom.theme.isotope.js"></script>
         <script type="text/javascript" src="assets/js/custom.theme.js"></script>
         <script type="text/javascript" src="assets/js/theme.pagebuilder.js"></script>
+        <!--<script type="text/javascript" src="assets/js/custom.theme.isotope.js"></script>
+        <script type="text/javascript" src="assets/js/custom.theme.js"></script>
+        <script type="text/javascript" src="assets/js/theme.pagebuilder.js"></script>-->
         
 
     </body>
