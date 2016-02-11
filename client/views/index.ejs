@@ -3,6 +3,7 @@
     <head>
         <title>TWO GURUZ</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
 
         <!-- Mobile Specific Metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -106,20 +107,20 @@
                     <nav id="navi" class="clearfix">
                         <div id="navi_wrap" class="menu-demo-menu-container">
                             <ul class="menu">
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" ng-class="{'current-menu-item': isActive('/')}" ng-click="location.reload(true);">
-                                    <a href="/">HOME</a>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" ng-class="{'current-menu-item': isActive('/')}">
+                                    <a href="/" onClick="window.location.reload()">HOME</a>
                                 </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children" ng-class="{'current-menu-item': isActive('/service')}" ng-click="location.reload(true);">
-                                    <a href="/service">SERVICES</a>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children" ng-class="{'current-menu-item': isActive('/service')}">
+                                    <a href="/service" onClick="window.location.reload()">SERVICES</a>
                                 </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" ng-class="{'current-menu-item': isActive('/creative')}" ng-click="location.reload(true);">
-                                    <a href="/creative">CREATIVES</a>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" ng-class="{'current-menu-item': isActive('/creative')}">
+                                    <a href="/creative" onClick="window.location.reload()">CREATIVES</a>
                                 </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" ng-class="{'current-menu-item': isActive('/client')}" ng-click="location.reload(true);">
-                                    <a href="/client">CLIENTS</a>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" ng-class="{'current-menu-item': isActive('/client')}">
+                                    <a href="/client" onClick="window.location.reload()">CLIENTS</a>
                                 </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children" ng-class="{'current-menu-item': isActive('/contact')}" ng-click="location.reload(true);">
-                                    <a href="/contact">CONTACT</a>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children" ng-class="{'current-menu-item': isActive('/contact')}">
+                                    <a href="/contact" onClick="window.location.reload()">CONTACT</a>
                                 </li>
                                 <li>
                                     <a href="javascript:location.reload(true)">Refresh Page</a>
