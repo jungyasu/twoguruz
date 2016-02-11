@@ -554,7 +554,7 @@ input[type="text"].textboxsearch {
 #advanced_menu_toggle, 
 #advanced_menu_toggle2{ display:none; 
 position: absolute; z-index: 999;  width:60px; height:60px; line-height:70px; text-decoration: none;font-size:24px; text-align: center; right:0; left:auto; top:0;
-color:#ccc; color:rgba(255,255,255,0.4); background-color:#666; background-color:rgba(0,0,0,0.1); }
+color:#ccc; color:rgba(255,255,255,0.4); background:transparent; /*background-color:#666; Yasu background-color:rgba(0,0,0,0.1);*/ }
 #advanced_menu_toggle { right:auto; left:0; }
 #advanced_menu_toggle i, #advanced_menu_toggle2 i{  }
 .mobile_active #advanced_menu_toggle,.mobile_active #advanced_menu_toggle2{ display: block; }
