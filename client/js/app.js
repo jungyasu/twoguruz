@@ -51,6 +51,11 @@ var tgApp = angular.module('tgApp', [
                 scope.initCarousel = function(element) {
                   // provide any default options you want
                     var defaultOptions = {
+                      items : 10, //10 items above 1000px browser width
+                      itemsDesktop : [1000,10], //5 items between 1000px and 901px
+                      itemsDesktopSmall : [900,4], // betweem 900px and 601px
+                      itemsTablet: [600,3], //2 items between 600 and 0
+                      itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
                     };
                     var customOptions = scope.$eval($(element).attr('data-options'));
                     // combine the two options objects

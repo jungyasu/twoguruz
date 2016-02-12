@@ -113,28 +113,62 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="container moudle" ng-controller="MainCtrl">
-                                                <data-owl-carousel class="owl-carousel" data-options="{navigation: false, pagination: true, rewindNav : false}">
-                                                  <div owl-carousel-item="" ng-repeat="item in ::items1" class="item">
-                                                    <img src="{{::item}}" class="img-responsive">
-                                                  </div>
-                                                </data-owl-carousel>
+                                            <div class="container" ng-controller="MainCtrl">
+                                                <div class="moudle">
+                                                    <data-owl-carousel class="owl-carousel" data-options="{navigation: false, pagination: true, rewindNav : false}">
+                                                      <div owl-carousel-item="" ng-repeat="item in ::items1" class="item">
+                                                        <img src="{{::item}}" class="img-responsive" style="max-height:56px">
+                                                      </div>
+                                                    </data-owl-carousel>
+                                                </div>
                                             </div>
 
                                             <div class="container">
                                                 <div class="row-fluid">
-                                                    <div class="span12 moudle bottom-space-60 ">
+                                                    <div class="span12 moudle">
                                                         <div class="promote-wrap promote-wrap-2c">
                                                             <div class="promote-text" style="margin-right: 155px;">
-                                                                <h4 class="promote-big">FEATURED BY TWO GURUZ</h4>
-                                                                <p class="promote-medium">
-                                                                    please click the button to learn more</p>
-                                                            </div>
-                                                            <div class="promote-button-wrap">
-                                                                <a class="promote-button btn-dark ux-btn " title="CHECK IT!" href="#"
-                                                                    pajx-click="true">CHECK IT!</a>
+                                                                <h4 class="promote-big">CONTACT US</h4>
                                                             </div>
                                                         </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="row-fluid">
+                                                    <div class="span12 moudle">
+                                                        <div class="contactform">
+                                                            <a name="20140404-044450-491" class="20140404-044450-491"></a>
+                                                            <form action="contact.php" id="contact-form" class="contact_form"
+                                                                method="POST">
+                                                                <p>
+                                                                    <input type="text" id="idi_name" name="idi_name"
+                                                                        class="requiredField" value="YOUR NAME"
+                                                                        onblur="if (this.value =='' ) {this.value = 'YOUR NAME';}"
+                                                                        onfocus="if (this.value == 'YOUR NAME' || this.value == 'Required' ) { this.value = ''; }">
+                                                                </p>
+                                                                <p>
+                                                                    <input type="text" id="idi_mail" name="idi_name"
+                                                                        class="requiredField email" value="YOUR EMAIL"
+                                                                        onblur="if (this.value =='' ) {this.value = 'YOUR EMAIL';}"
+                                                                        onfocus="if (this.value == 'YOUR EMAIL' || this.value  == 'Required' || this.value == 'Invalid email' ) {this.value = '';}">
+                                                                </p>
+                                                                <p>
+                                                                    <textarea rows="4" name="idi_text" id="idi_text" cols="4"
+                                                                        class="requiredField inputError"
+                                                                        onfocus="if(this.value==this.defaultValue|| this.value  == 'Required'){this.value='';}"
+                                                                        onblur="if(this.value==''){this.value=this.defaultValue;}">YOUR QUESTIONS</textarea>
+                                                                </p>
+                                                                <input type="hidden" class="info-tip" value="send"
+                                                                    name="contact_form" data-message="Sent!"
+                                                                    data-sending="Sending"
+                                                                    data-error="Please Enter Correct Verification Number">
+                                                                <div class="btnarea">
+                                                                    <input type="submit" id="idi_send" name="idi_send"
+                                                                        value="SEND">
+                                                                </div>
+                                                            </form>
+                                                        </div><!-- end of contactform -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -145,6 +179,10 @@
                             </div>
                         </div>
                         <!--end post-->
+
+                        <script>
+
+                        </script>
 
         
                         
