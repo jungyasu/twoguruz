@@ -48,7 +48,7 @@
         <script>
 
             function reloadPage(link){
-                window.location.path = link;
+                $location.path(link);
                 window.location.reload();
             }
 
@@ -121,16 +121,16 @@
                                     <a href="/" onClick="reloadPage('/');">HOME</a>
                                 </li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children" ng-class="{'current-menu-item': isActive('/service')}">
-                                    <a href="/service" onClick="reloadPage('/');">SERVICES</a>
+                                    <a href="/service" onClick="reloadPage('/service');">SERVICES</a>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" ng-class="{'current-menu-item': isActive('/creative')}">
-                                    <a href="/creative" onClick="reloadPage('/');">CREATIVES</a>
+                                    <a href="/creative" onClick="reloadPage('/creative');">CREATIVES</a>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" ng-class="{'current-menu-item': isActive('/client')}">
-                                    <a href="/client" onClick="reloadPage('/');">CLIENTS</a>
+                                    <a href="/client" onClick="reloadPage('/client');">CLIENTS</a>
                                 </li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children" ng-class="{'current-menu-item': isActive('/contact')}">
-                                    <a href="/contact" onClick="reloadPage('/');">CONTACT</a>
+                                    <a href="/contact" onClick="reloadPage('/contact');">CONTACT</a>
                                 </li>
                                 <li>
                                     <a href="javascript:location.reload(true)">Refresh Page</a>
