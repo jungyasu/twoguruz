@@ -1,5 +1,6 @@
 var tgApp = angular.module('tgApp', [
-    'ngRoute']).
+    'ngRoute',
+    'ngAnimate']).
     config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
         
         //typical routes... when someone navigates to a given directory, load the partial, and use the controller
@@ -81,4 +82,7 @@ var tgApp = angular.module('tgApp', [
             }
         };
     }]);
+    //
+
+
     

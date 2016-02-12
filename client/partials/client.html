@@ -28,7 +28,7 @@
                                                             </p>
                                                             <br>
                                                             <div class="text-center">
-                                                                <a href="/client" target="_self" class="ux-btn bg-theme-color-1 btn-light">MORE</a>
+                                                                <a href="#commongoals" target="_self" class="ux-btn bg-theme-color-1 btn-light">MORE</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -47,7 +47,7 @@
                                                             </p> -->
                                                             <br>
                                                             <div class="text-center">
-                                                                <a href="http://www.facebook.com/twoguru" target="_self" class="ux-btn bg-theme-color-4 btn-light">MORE</a>
+                                                                <a href="#availability" target="_self" class="ux-btn bg-theme-color-4 btn-light">MORE</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -63,13 +63,13 @@
                                                                 Within the timeframe you are informed step by step of the progress with weekly reports.
                                                             </p>
                                                             <div class="text-center">
-                                                                <a href="/contact" target="_self" class="ux-btn bg-theme-color-7 btn-light">MORE</a>
+                                                                <a href="#tools" target="_self" class="ux-btn bg-theme-color-7 btn-light">MORE</a>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="container">
+                                            <div class="container" id="availability">
                                                 <div class="row-fluid">
                                                     <div class="span12 moudle">
                                                         <h3>AVAILABILITY</h3>
@@ -81,7 +81,7 @@
                                                     
                                                     <div class="span10 moudle">
                                                         <p>
-                                                            <span class="dropcap">W</span>hether you’re after a one off campaign, original content, scheduling, or full management please <a href="/contact" target="_self"><b>contact us</b></a>. 
+                                                            <span class="dropcap">W</span>hether you’re after a one off campaign, original content, scheduling, or full management please <a href="#contactus" target="_self"><b>contact us</b></a>. 
                                                         </p>
                                                         <br>
                                                         <p>
@@ -90,7 +90,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="container">
+                                            <div class="container" id="commongoals">
                                                 <div class="row-fluid">
                                                     <div class="span12 moudle">
                                                         <h3>COMMON GOALS</h3>
@@ -106,7 +106,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="container">
+                                            <div class="container" id="tools">
                                                 <div class="row-fluid">
                                                     <div class="span12 moudle bottom-space-20 ">
                                                         <h3>TOOLS</h3>
@@ -194,6 +194,22 @@
                             jQuery(document).ready(function(){
                                 var ux_pb = new ThemePageBuilder();
                                 ux_pb.init();
+                            });
+
+                            //smoothScroll
+                            $(function() {
+                              $('a[href*="#"]:not([href="#"])').click(function() {
+                                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                                  var target = $(this.hash);
+                                  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                                  if (target.length) {
+                                    $('html, body').animate({
+                                      scrollTop: target.offset().top
+                                    }, 1000);
+                                    return false;
+                                  }
+                                }
+                              });
                             });
                         </script>
 

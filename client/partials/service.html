@@ -22,8 +22,8 @@
                                                                     class="span12 moudle"
                                                                    >
                                                                     <div
-                                                                        class="text_block ux-mod-nobg ">
-                                                                        <h1>SERVICES</h1>
+                                                                        class="text_block ux-mod-nobg">
+                                                                        <h1 class="animated bounce">SERVICES</h1>
                                                                         <p>Two Guruz tailors their skills to your needs.</p>
                                                                     </div>
                                                                 </div>
@@ -31,7 +31,7 @@
                                                             <div class="row-fluid">
                                                                 <div
                                                                     class="span12 moudle">
-                                                                    <a href="#"
+                                                                    <a href="#whatwedo"
                                                                         class="ux-btn bg-theme-color-10 btn-light">LEARN MORE</a>
                                                                 </div>
                                                             </div>
@@ -39,8 +39,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            
-                                            <div class="container">
+
+
+                                            <div class="container" id="whatwedo">
                                                 <div class="row-fluid">
                                                     <div class="span12 moudle">
                                                             <h1>
@@ -201,5 +202,21 @@
                             jQuery(document).ready(function(){
                                 var ux_pb2 = new ThemePageBuilder();
                                 ux_pb2.init();
+                            });
+
+                            //smoothScroll
+                            $(function() {
+                              $('a[href*="#"]:not([href="#"])').click(function() {
+                                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                                  var target = $(this.hash);
+                                  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                                  if (target.length) {
+                                    $('html, body').animate({
+                                      scrollTop: target.offset().top
+                                    }, 500);
+                                    return false;
+                                  }
+                                }
+                              });
                             });
                         </script>
