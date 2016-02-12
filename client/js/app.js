@@ -8,7 +8,8 @@ var tgApp = angular.module('tgApp', [
         $routeProvider.when('/contact', {templateUrl: '/partials/contact.html', controller: 'contactController', reloadOnSearch:false});
         $routeProvider.when('/client', {templateUrl: '/partials/client.html', controller: 'clientController', reloadOnSearch:false});
         $routeProvider.when('/creative', {templateUrl: '/partials/creative.html', controller: 'creativeController', reloadOnSearch:false});
-        $routeProvider.when('/portfolio', {templateUrl: '/partials/portfolio.html', controller: 'portfolioController as work', reloadOnSearch:false});
+        // $routeProvider.when('/portfolio', {templateUrl: '/partials/portfolio.html', controller: 'portfolioController as work', reloadOnSearch:false});
+        $routeProvider.when('/courtneybragg', {templateUrl: '/partials/portfolio.html', controller: 'portfolioController', reloadOnSearch:false});
         // $routeProvider.when('/projects', {templateUrl: '/partials/projects.html', controller: 'projectsController'});
         // $routeProvider.when('/projects/customerapi', {templateUrl: '/partials/projects/customerapi.html', controller: 'customerApiController'});
         // $routeProvider.when('/projects/chat', {templateUrl: '/partials/projects/chat.html', controller: 'chatController'});

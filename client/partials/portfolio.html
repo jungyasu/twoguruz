@@ -1,35 +1,20 @@
-<div class="post type-post status-publish format-gallery has-post-thumbnail hentry category-blog category-illustration category-portfolio category-uncategorized tag-digital-art tag-illustration-2">
+<div id="post-8" class="post-8 post type-post status-publish format-gallery has-post-thumbnail hentry category-branding category-portfolio category-uncategorized tag-branding-2 tag-graphic-design">
                             <div id="content_wrap" class="">
-                                <div class="row-fluid gallery-wrap gallery-wrap-fullwidth">
+                                <div class="row-fluid gallery-wrap gallery-wrap-fullwidth ">
                                     <div class="gallery-images-wrap ">
-                                        <div class="row-fluid">
+                                        <div class="row-fluid ">
                                             <div class="clear gallery-post-wrap">
-                                                <div class="gallery-wrap-slider ">
-                                                    <!--galleria slider
-                                                    data-crop: fit: flase, fill: true
-                                                    data-transition: fade, slide
-                                                    data-interval: timer
-                                                    -->
-                                                    <div class="galleria" data-crop="false" data-transition="fade" data-interval="5000">
-                                                        <div ng-repeat="work in workholder" ng-if="$index == index_num">
-                                                            <img ng-repeat="imgs in work.imgs" ng-src="{{imgs.src}}">
-                                                        </div>
-                                                            <!-- <img ng-repeat="imgs in selectedImg.src" ng-src="{{imgs.src}}"> -->
-                                                    </div>
-                                                </div>
                                                 <div class="gallery-info-wrap container">
                                                     <div class="title-bar-wrap " id="title-bar">
                                                         <div id="title-wrap">
                                                             <div class="title-wrap-inn">
                                                                 <div id="main-title">
-                                                                    <h1 class="main-title" ng-repeat="work in workholder"  ng-if="$index == index_num">{{work.title}}</h1>
+                                                                    <h1 class="main-title">
+                                                                        COURTNEY BRAGG
+                                                                    </h1>
                                                                     <div class="post-meta">
-                                                                        <span class="post-meta-unit date">Date: April 1 2014</span>
-                                                                        <span class="post-meta-unit tag">Tags: <a
-                                                                            href="http://ximudesign.com/aside/tag/digital-art/"
-                                                                            rel="tag">Digital Art</a>, <a
-                                                                            href="http://ximudesign.com/aside/tag/illustration-2/"
-                                                                            rel="tag">Illustration</a></span>
+                                                                        <span class="post-meta-unit date">Date: March 26 2014</span>
+                                                                        <span class="post-meta-unit tag">Tags: <a href="http://ximudesign.com/aside/tag/branding-2/" rel="tag">Branding</a>, <a href="http://ximudesign.com/aside/tag/graphic-design/" rel="tag">Graphic Design</a></span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -37,107 +22,250 @@
                                                         <!--End #title-wrap-->
                                                     </div>
                                                     <!--End #title-bar-wrap"-->
-                                                    <div class="row-fluid" ng-repeat="work in workholder" ng-if="$index == index_num">
+                                                    <div class="row-fluid">
                                                         <div class="entry span9">
-                                                            <p>
-                                                                 {{work.desc}}
-                                                            </p>
+                                                            <p><span class="dropcap">M</span>attis scelerisque nisi, in, ac risus montes. Proin, integer est magna lundium odio diam mus, cursus placerat, vut magnis pellentesque dictumst? Lorem, in, porttitor amet turpis nec aliquet porta aliquam mattis sed turpis mattis a montes magna rhoncus et? Sit cursus tempor et, scelerisque arcu dignissim in porttitor pulvinar? Porttitor dolor? Placerat, non pellentesque porta. Eros sociis etiam auctor augue.</p>
                                                         </div>
                                                         <!--end entry-->
-                                                        <ul class="gallery-info-property span3">
-                                                            <li><span class="gallery-info-property-tit">Author:</span>
-                                                                <span><a href="https://www.behance.net/gstv">{{work.author}}</a></span></li>
-                                                            <li><span class="gallery-info-property-tit">Project:</span>
-                                                                <span><a
-                                                                    href="https://www.behance.net/gallery/Reacciones/10702889">Reacciónes.</a></span>
-                                                            </li>
-                                                            <li><span class="gallery-info-property-tit date">Date:
-                                                            </span> <span>April 1 2014</span></li>
-                                                            <li><span class="gallery-info-property-tit tag">Tags:
-                                                            </span> <span><a
-                                                                    href="http://ximudesign.com/aside/tag/digital-art/"
-                                                                    rel="tag">Digital Art</a>, <a
-                                                                    href="http://ximudesign.com/aside/tag/illustration-2/"
-                                                                    rel="tag">Illustration</a></span></li>
-                                                        </ul>
+                                                        <div class="gallery-info-property span3 text-center">
+                                                            <a class="icons-sidebar-unit" href="https://twitter.com/courtneybragg_" title="Follow us"><i class="fa fa-twitter-square"></i></a>    
+                                                            <a class="icons-sidebar-unit" href="https://www.facebook.com/courtney.bragg1/" title="Follow us"><i class="fa fa-facebook-square"></i></a>
+                                                            <a class="icons-sidebar-unit" href="https://www.instagram.com/courtney_bragg/" title=""><i class="fa fa-instagram"></i></a>
+                                                            <a class="icons-sidebar-unit" href="https://www.pinterest.com/courtneybragg2/" title=""><i class="fa fa-pinterest-square"></i></a>
+                                                            <a class="icons-sidebar-unit" href="https://www.pinterest.com/courtneybragg2/" title=""><i class="fa fa-linkedin-square"></i></a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <!--end gallery-info-wrap -->
                                             </div>
-
+                                            
 
                                             <div class="container">
-                                                <div id="owl-demo" class="owl-carousel owl-theme">
-                                                    <div class="item" ng-repeat="work in workholder">
-                                                        <img ng-src="{{work.imgs[0].src}}" class="img-responsive"></img>
-                                                        <a ng-click="changeIndex($index); selectedWork.src = work.imgs; myFilter = { title : 'SALT' }"  href="#"
-                                                            title="">{{work.title}}</a></div>
+                                                <!--Portfolio isotope-->
+                                                <div class="row-fluid">
+                                                    <!--Filter-->
+                                                    <div class="clearfix filters center-ux">
+                                                        <ul>
+                                                            <li class="active"><a href="#" data-filter="*">All</a></li>
+                                                            <li><a data-filter=".filter_graphic_design" href="#">GRAPHIC DESIGN</a></li>
+                                                            <li><a data-filter=".filter_editorial_design" href="#">EDITORIAL DESIGN</a></li>
+                                                            <li><a data-filter=".filter_fashion" href="#">FASHION</a></li>
+                                                            <li><a data-filter=".filter_photography-2" href="#">PHOTOGRAPHY</a></li>
+                                                            <li><a data-filter=".filter_typography" href="#">TYPOGRAPHY</a></li>
+                                                            <li><a data-filter=".filter_fine_arts" href="#">FINE ARTS</a></li>
+                                                        </ul>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <!-- <div class="galleria" ng-repeat="work in workholder" ng-if="$index == index_num">
-                                                    <img ng-repeat="imgs in work.imgs" ng-src="{{imgs.src}}">
-                                                    <img ng-repeat="srcs in selectedWork.src" ng-src="{{srcs.src}}">
-                                            </div> -->
-                                            <!-- <img ng-repeat="srcs in selectedWork.src" ng-src="{{srcs.src}}"> -->
-
-                                            <!-- <div class="container">
-                                                <div id="owl-demo" class="owl-carousel owl-theme">
-                                                    <div class="item" ng-repeat="work in workholder">
-                                                        <img ng-src="{{work.imgs[0].src}}" class="img-responsive"></img>
-                                                        <a ng-click="selectedImg.src = work.imgs[0].src" href="#"
-                                                            title="">{{work.title}}</a></div>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-
-                                            <div class="container comment-wrap">
-                                                <div id="comments">
-                                                    <div id="respondwrap">
-                                                        <div id="respond" class="comment-respond">
-                                                            <h3 id="reply-title" class="comment-reply-title">
-                                                                <span class="comm-reply-title">LEAVE A COMMENT</span> <small><a
-                                                                    rel="nofollow" id="cancel-comment-reply-link"
-                                                                    href="/aside/2014/04/01/concrete-cross/#respond"
-                                                                    style="display: none;">CANCEL REPLY</a></small>
-                                                            </h3>
-                                                            <form
-                                                                action="http://ximudesign.com/aside/wp-comments-post.php"
-                                                                method="post" id="commentform" class="comment-form">
-                                                                <p class="span6">
-                                                                    <input id="author" name="author" type="text"
-                                                                        class="requiredFieldcomm" value="NAME" size="30"
-                                                                        aria-required="true" tabindex="1"
-                                                                        onfocus="if(this.value=='NAME'){this.value='';}"
-                                                                        onblur="if(this.value==''){this.value='NAME';}">
-                                                                </p>
-                                                                <p class="span6">
-                                                                    <input id="email" name="email" type="text"
-                                                                        class="email requiredFieldcomm" value="EMAIL" size="30"
-                                                                        aria-required="true" tabindex="2"
-                                                                        onfocus="if(this.value=='EMAIL'){this.value='';}"
-                                                                        onblur="if(this.value==''){this.value='EMAIL';}">
-                                                                </p>
-                                                                <p>
-                                                                    <textarea id="comment" name="comment"
-                                                                        class="requiredFieldcomm" cols="100%" tabindex="4"
-                                                                        aria-required="true"
-                                                                        onfocus="if(this.value==this.defaultValue){this.value='';}"
-                                                                        onblur="if(this.value==''){this.value=this.defaultValue;}">YOU REVIEW</textarea>
-                                                                </p>
-                                                                <p class="form-submit">
-                                                                    <input name="submit" type="submit" id="submit" value="SEND">
-                                                                    <input type="hidden" name="comment_post_ID" value="151"
-                                                                        id="comment_post_ID"> <input type="hidden"
-                                                                        name="comment_parent" id="comment_parent" value="0">
-                                                                </p>
-                                                            </form>
+                                                    <!--End filter-->
+                                                    <div class="container-isotope clear" data-post="20140424-122148-321">
+                                                        <div id="isotope-load" style="display: none;">
+                                                            <div class="ux-loading"></div>
+                                                            <div class="ux-loading-transform">
+                                                                <div class="loading-dot1">&nbsp;</div>
+                                                                <div class="loading-dot2">&nbsp;</div>
+                                                            </div>
                                                         </div>
-                                                        <!-- #respond -->
+                                                        <div class="isotope masonry less-space isotope_fade" data-space="0px"
+                                                            data-size="medium">
+                                                            <div class="filter_graphic_design filter_editorial_design filter_photography-2 width2 isotope-item container3d animation-default-ux animation-scroll-ux fadeined">
+                                                                <div class="inside card">
+                                                                    <div class="flip_wrap_back back face">
+                                                                        <div class="flip_wrap_back_con centered-ux"
+                                                                           >
+                                                                            <h2>
+                                                                                <a href="portfolio.html">SALT</a>
+                                                                            </h2>
+                                                                            <ul class="hover_thumb_wrap">
+                                                                                <li class="hover_thumb_unit"><a
+                                                                                    href="projects/SALT/1.jpg"
+                                                                                    title="IMG_4783" class="imgwrap lightbox"
+                                                                                    data-rel="post671"><img
+                                                                                        src="projects/SALT/1.jpg"></a></li>
+                                                                                <li class="hover_thumb_unit"><a
+                                                                                    href="projects/SALT/2.jpg"
+                                                                                    title="IMG_4784" class="imgwrap lightbox"
+                                                                                    data-rel="post671"><img
+                                                                                        src="projects/SALT/2.jpg"></a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="flip_wrap_back_bg post-bgcolor-default" ></div>
+                                                                    </div>
+                                                                    <img src="projects/SALT/1.jpg" class="front face" style="height:192px">
+                                                                </div>
+                                                                <!--End inside-->
+                                                            </div>
+                                                            <div class="filter_editorial_design filter_graphic_design filter_fashion width2 isotope-item container3d animation-default-ux animation-scroll-ux fadeined">
+                                                                <div class="inside card">
+                                                                    <div class="flip_wrap_back back face">
+                                                                        <div class="flip_wrap_back_con centered-ux">
+                                                                            <h2>
+                                                                                <a href="portfolio.html">DUSK &amp; DAWN LOOKBOOK'16</a>
+                                                                            </h2>
+                                                                            <ul class="hover_thumb_wrap">
+                                                                                <li class="hover_thumb_unit"><a
+                                                                                    href="projects/DuskAndDawn/1.jpg"
+                                                                                    title="Expired-shapes-1" class="imgwrap lightbox"
+                                                                                    data-rel="post183"><img
+                                                                                        src="projects/DuskAndDawn/1.jpg"></a></li>
+                                                                                <li class="hover_thumb_unit"><a
+                                                                                    href="projects/DuskAndDawn/2.jpg"
+                                                                                    title="Expired-shapes-2" class="imgwrap lightbox"
+                                                                                    data-rel="post183"><img
+                                                                                        src="projects/DuskAndDawn/2.jpg"></a></li>
+                                                                                <li class="hover_thumb_unit"><a
+                                                                                    href="projects/DuskAndDawn/3.jpg"
+                                                                                    title="Expired-shapes-3" class="imgwrap lightbox"
+                                                                                    data-rel="post183"><img
+                                                                                        src="projects/DuskAndDawn/3.jpg"></a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="flip_wrap_back_bg bg-theme-color-10"
+                                                                            ></div>
+                                                                    </div>
+                                                                    <img src="projects/DuskAndDawn/4.jpg" class="front face" style="height:192px">
+                                                                </div>
+                                                                <!--End inside-->
+                                                            </div>
+                                                            <div class="filter_graphic_design filter_typography filter_fine_arts width2 isotope-item container3d animation-default-ux animation-scroll-ux fadeined">
+                                                                <div class="inside card">
+                                                                    <div class="flip_wrap_back back face">
+                                                                        <div class="flip_wrap_back_con centered-ux"
+                                                                           >
+                                                                            <h2>
+                                                                                <a href="portfolio.html">F*CK</a>
+                                                                            </h2>
+                                                                            <ul class="hover_thumb_wrap">
+                                                                                <li class="hover_thumb_unit"><a
+                                                                                    href="portfolio.html"
+                                                                                    title="Paper-Hot-Cup-Mock-Up-vol-2"
+                                                                                    class="imgwrap lightbox" data-rel="post176"><img
+                                                                                       
+                                                                                        src="projects/F_CK/1.jpg"></a></li>
+                                                                                <li class="hover_thumb_unit"><a
+                                                                                    href="portfolio.html"
+                                                                                    title="Paper-Hot-Cup-Mock-Up-vol-2"
+                                                                                    class="imgwrap lightbox" data-rel="post176"><img
+                                                                                       
+                                                                                        src="projects/F_CK/2.jpg"></a></li>
+                                                                                <li class="hover_thumb_unit"><a
+                                                                                    href="portfolio.html"
+                                                                                    title="Paper-Hot-Cup-Mock-Up-vol-0"
+                                                                                    class="imgwrap lightbox" data-rel="post176"><img
+                                                                                       
+                                                                                        src="projects/F_CK/3.jpg"></a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="flip_wrap_back_bg post-bgcolor-default"
+                                                                            ></div>
+                                                                    </div>
+                                                                    <img
+                                                                        src="projects/F_CK/1.jpg"
+                                                                        class="front face" style="height:192px">
+                                                                </div>
+                                                                <!--End inside-->
+                                                            </div>
+                                                            <div class="filter_editorial_design filter_graphic_design filter_typography width2 isotope-item container3d animation-default-ux animation-scroll-ux fadeined">
+                                                                <div class="inside card">
+                                                                    <div class="flip_wrap_back back face">
+                                                                        <div class="flip_wrap_back_con centered-ux"
+                                                                           >
+                                                                            <h2>
+                                                                                <a href="portfolio.html">Death by dagger</a>
+                                                                            </h2>
+                                                                            <ul class="hover_thumb_wrap">
+                                                                                <li class="hover_thumb_unit"><a
+                                                                                    href="portfolio.html"
+                                                                                    title="Hipster-Wizard-2" class="imgwrap lightbox"
+                                                                                    data-rel="post162"><img
+                                                                                        src="projects/DeathByDagger/1.jpg"></a></li>
+                                                                                <li class="hover_thumb_unit"><a
+                                                                                    href="portfolio.html"
+                                                                                    title="Hipster Wizard 3" class="imgwrap lightbox"
+                                                                                    data-rel="post162"><img
+                                                                                        src="projects/DeathByDagger/2.jpg"></a></li>
+                                                                                <li class="hover_thumb_unit"><a
+                                                                                    href="portfolio.html"
+                                                                                    title="Hipster Wizard 4" class="imgwrap lightbox"
+                                                                                    data-rel="post162"><img
+                                                                                        src="projects/DeathByDagger/3.jpg"></a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="flip_wrap_back_bg post-bgcolor-default"
+                                                                            ></div>
+                                                                    </div>
+                                                                    <img
+                                                                        src="projects/DeathByDagger/1.jpg"
+                                                                        class="front face" style="height:192px">
+                                                                </div>
+                                                                <!--End inside-->
+                                                            </div>
+                                                            <div class="filter_editorial_design filter_graphic_design filter_typography width2 isotope-item container3d animation-default-ux animation-scroll-ux fadeined">
+                                                                <div class="inside card">
+                                                                    <div class="flip_wrap_back back face">
+                                                                        <div class="flip_wrap_back_con centered-ux"
+                                                                           >
+                                                                            <h2>
+                                                                                <a href="portfolio.html">Ralph Hotere: Black Light</a>
+                                                                            </h2>
+                                                                            <ul class="hover_thumb_wrap">
+                                                                                <li class="hover_thumb_unit"><a
+                                                                                    href="portfolio.html"
+                                                                                    title="Hipster-Wizard-2" class="imgwrap lightbox"
+                                                                                    data-rel="post162"><img
+                                                                                        src="projects/RalphHotereBlackLight/1.jpg"></a></li>
+                                                                                <li class="hover_thumb_unit"><a
+                                                                                    href="portfolio.html"
+                                                                                    title="Hipster Wizard 3" class="imgwrap lightbox"
+                                                                                    data-rel="post162"><img
+                                                                                        src="projects/RalphHotereBlackLight/2.jpg"></a></li>
+                                                                                <li class="hover_thumb_unit"><a
+                                                                                    href="portfolio.html"
+                                                                                    title="Hipster Wizard 4" class="imgwrap lightbox"
+                                                                                    data-rel="post162"><img
+                                                                                        src="projects/RalphHotereBlackLight/3.jpg"></a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="flip_wrap_back_bg post-bgcolor-default"
+                                                                            ></div>
+                                                                    </div>
+                                                                    <img
+                                                                        src="projects/RalphHotereBlackLight/1.jpg"
+                                                                        class="front face" style="height:192px">
+                                                                </div>
+                                                                <!--End inside-->
+                                                            </div>
+                                                            <div class="filter_editorial_design filter_graphic_design filter_typography width2 isotope-item container3d animation-default-ux animation-scroll-ux fadeined">
+                                                                <div class="inside card">
+                                                                    <div class="flip_wrap_back back face">
+                                                                        <div class="flip_wrap_back_con centered-ux"
+                                                                           >
+                                                                            <h2>
+                                                                                <a href="portfolio.html">The Māori New Year</a>
+                                                                            </h2>
+                                                                            <ul class="hover_thumb_wrap">
+                                                                                <li class="hover_thumb_unit"><a
+                                                                                    href="portfolio.html"
+                                                                                    title="Hipster-Wizard-2" class="imgwrap lightbox"
+                                                                                    data-rel="post162"><img
+                                                                                        src="projects/TheMaoriNewYear/1.jpg"></a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="flip_wrap_back_bg post-bgcolor-default"
+                                                                            ></div>
+                                                                    </div>
+                                                                    <img
+                                                                        src="projects/TheMaoriNewYear/1.jpg"
+                                                                        class="front face" style="height:192px">
+                                                                </div>
+                                                                <!--End inside-->
+                                                            </div>
+
+                                                        </div>
                                                     </div>
+                                                    <!--End container-isotope-->
                                                 </div>
-                                                <!-- #comments -->
+                                                <!--End row-fluid-->
                                             </div>
+
                                         </div>
                                         <!--end row-fluid-->
                                     </div>
@@ -147,4 +275,10 @@
                             </div>
                             <!--end content_wrap-->
                         </div>
-                        <!--end post-->
+                        <!--end row-fluid-->
+                        <script type="text/javascript">
+                            jQuery(document).ready(function() {
+                                var ux_pb = new ThemePageBuilder();
+                                ux_pb.init();
+                            });
+                        </script>

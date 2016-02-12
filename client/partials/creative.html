@@ -75,7 +75,7 @@
                                                         <div class="row-fluid" ng-repeat="data in dataholder| filter: searchName">
                                                             <div
                                                                 class="span12 moudle moudle_has_animation animation-default-ux animation-scroll-ux  bottom-space-no  animation_hidden fadeined"
-                                                                style="opacity: 1; margin-bottom:0;">
+                                                                style="opacity: 1; margin-bottom:0; padding:0;">
 
                                                                 <!--Portfolio interlock list-->
                                                                 <div class="interlock-list">
@@ -93,7 +93,7 @@
                                                                         </div>
                                                                         <div class="iterlock-caption">
                                                                             <a
-                                                                                href="{{data.Url}}"
+                                                                                href="{{data.Url}}" target="_self"
                                                                                 title="{{data.Name}}"><h2>{{data.Name}}</h2></a>
                                                                             <div class="iterblock-expt hidden-phone">
                                                                                 <p>{{data.Desc}}</p>
@@ -101,22 +101,19 @@
                                                                             <ul class="blog_meta hidden-phone">
                                                                                 <li class="blog_meta_date"><i class="fa fa-calendar"></i>March
                                                                                     26 2014</li>
-                                                                                <li class="blog_meta_cate"><i class="fa fa-folder-o"></i><a
-                                                                                    href="#"
-                                                                                    title="View all posts in BRANDING" rel="category tag">BRANDING</a>
-                                                                                    / <a
-                                                                                    href="#"
-                                                                                    title="View all posts in PORTFOLIO" rel="category tag">PORTFOLIO</a>
-                                                                                    / <a
-                                                                                    href="#"
-                                                                                    title="View all posts in UNCATEGORIEZED"
-                                                                                    rel="category tag">UNCATEGORIEZED</a></li>
                                                                                 <li class="blog_meta_cate"><i class="fa fa-tag"></i><a
                                                                                     href="#"
-                                                                                    rel="tag">Branding</a> / <a
+                                                                                    rel="tag">Editorial Design</a> / <a
                                                                                     href="#"
-                                                                                    rel="tag">Graphic Design</a></li>
-                                                                                <li class="blog_meta_auhtor"><i class="fa fa-user"></i>admin</li>
+                                                                                    rel="tag">Graphic Design</a> / <a
+                                                                                    href="#"
+                                                                                    rel="tag">Fashion</a> / <a
+                                                                                    href="#"
+                                                                                    rel="tag">Photography</a> / <a
+                                                                                    href="#"
+                                                                                    rel="tag">Typography</a> / <a
+                                                                                    href="#"
+                                                                                    rel="tag">Fine Arts</a></li>
                                                                             </ul>
                                                                             <!--End .blog_meta-->
                                                                         </div>

@@ -10,7 +10,7 @@
 
         <!-- Favicons -->
         <link rel="shortcut icon" href="img/favicon.ico">
-        <link rel="apple-touch-icon-precomposed" href="img/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-180x180.png">
         
         <!-- Google fonts styles -->
         <link rel="stylesheet" id="google-fonts-Roboto-css" href="http://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C700%2C700italic%2C900%2C900italic&amp;ver=3.9.1" type="text/css" media="all">
@@ -124,19 +124,19 @@
                         <div id="navi_wrap" class="menu-demo-menu-container">
                             <ul class="menu">
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" ng-class="{'current-menu-item': isActive('/')}">
-                                    <a href="/" target="_self">HOME</a>
+                                    <a href="/" target="_self" onclick="reloadPage();">HOME</a>
                                 </li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children" ng-class="{'current-menu-item': isActive('/service')}">
-                                    <a href="/service" target="_self">SERVICES</a>
+                                    <a href="/service" target="_self" onclick="reloadPage();">SERVICES</a>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" ng-class="{'current-menu-item': isActive('/creative')}">
-                                    <a href="/creative" target="_self">CREATIVES</a>
+                                    <a href="/creative" target="_self" onclick="reloadPage();">CREATIVES</a>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" ng-class="{'current-menu-item': isActive('/client')}">
-                                    <a href="/client" target="_self">CLIENTS</a>
+                                    <a href="/client" target="_self" onclick="reloadPage();">CLIENTS</a>
                                 </li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children" ng-class="{'current-menu-item': isActive('/contact')}">
-                                    <a href="/contact" target="_self">CONTACT</a>
+                                    <a href="/contact" target="_self" onclick="reloadPage();">CONTACT</a>
                                 </li>
                             </ul>
                         </div>
@@ -243,6 +243,11 @@
         <!--<script type="text/javascript" src="assets/js/custom.theme.isotope.js"></script>
         <script type="text/javascript" src="assets/js/custom.theme.js"></script>
         <script type="text/javascript" src="assets/js/theme.pagebuilder.js"></script>-->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
+        <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
 
         <script type="text/javascript">
             jQuery(document).ready(function(){
