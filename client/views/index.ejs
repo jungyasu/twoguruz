@@ -44,6 +44,19 @@
                 overflow:hidden;
             }
         </style>
+
+        <script>   
+            function reloadPage(){
+                window.location.reload();
+            }
+
+            function MyCtrl($route, $scope) {
+                var lastRoute = $route.current;
+                $scope.$on('$locationChangeSuccess', function(event) {
+                    $route.current = lastRoute;
+                });
+            }
+        </script>
         
     </head>
     <body class="home page page-template-default responsive-ux boxed-line aside-layout-ux">
@@ -107,23 +120,26 @@
                     <nav id="navi" class="clearfix">
                         <div id="navi_wrap" class="menu-demo-menu-container">
                             <ul class="menu">
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" ng-class="{'current-menu-item': isActive('/')}" onClick="window.location.reload()">
-                                    <a href="/">HOME</a>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" ng-class="{'current-menu-item': isActive('/')}">
+                                    <a href="/" target="_self">HOME</a>
                                 </li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children" ng-class="{'current-menu-item': isActive('/service')}">
-                                    <a href="/service" onClick="window.location.reload()">SERVICES</a>
+                                    <a href="/service" target="_self">SERVICES</a>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" ng-class="{'current-menu-item': isActive('/creative')}">
-                                    <a href="/creative" onClick="window.location.reload()">CREATIVES</a>
+                                    <a href="/creative" target="_self">CREATIVES</a>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children" ng-class="{'current-menu-item': isActive('/client')}">
-                                    <a href="/client" onClick="window.location.reload()">CLIENTS</a>
+                                    <a href="/client" target="_self">CLIENTS</a>
                                 </li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children" ng-class="{'current-menu-item': isActive('/contact')}">
-                                    <a href="/contact" onClick="window.location.reload()">CONTACT</a>
+                                    <a href="/contact" target="_self">CONTACT</a>
                                 </li>
                                 <li>
                                     <a href="javascript:location.reload(true)">Refresh Page</a>
+                                </li>
+                                <li>
+                                    <a onClick="reloadPage()">Refresh Page</a>
                                 </li>
                             </ul>
                         </div>
