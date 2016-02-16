@@ -1,0 +1,147 @@
+<div class="page type-page status-publish hentry">
+                            <div class="row-fluid " style="min-height: 799px;">
+                                <div id="content_wrap" class="">
+                                    <div class="content-wrap-inn ">
+
+                                        <div class="container">
+                                            <div class="title-bar-wrap title-centered" id="title-bar">
+                                                <div id="title-wrap">
+                                                    <div class="title-wrap-inn">
+                                                        <div id="main-title">
+                                                            <h1 class="main-title"> CREATIVES</h1>
+                                                        </div>
+                                                    </div>
+                                                </div><!--End #title-wrap-->
+                                            </div><!--End #title-bar-wrap"-->
+                                        </div>
+
+                                        <div class="container">
+                                                <div class="row-fluid">
+                                                    <div class="span2 moudle">
+                                                        <section class="infrographic bignumber ux-mod-nobg">
+                                                            <div class="bignumber-item theme-color-11" data-digit="2">0</div>
+                                                            <h1 class="infrographic-tit">GRAPHIC DESIGNERS</h1>
+                                                            <!-- <p class="infrographic-subtit">Mattis tristique tincidunt
+                                                                porttitor enim, turpis scelerisque, nascetur.</p> -->
+                                                        </section>
+                                                        <!--End infrographic bignumber-->
+                                                    </div>
+                                                    <div class="span2 moudle">
+                                                        <section class="infrographic bignumber ux-mod-nobg">
+                                                            <div class="bignumber-item theme-color-1" data-digit="3">0</div>
+                                                            <h1 class="infrographic-tit">MODELS</h1>
+                                                        </section>
+                                                        <!--End infrographic bignumber-->
+                                                    </div>
+                                                    <div class="span2 moudle">
+                                                        <section class="infrographic bignumber ux-mod-nobg">
+                                                            <div class="bignumber-item theme-color-2" data-digit="1">0</div>
+                                                            <h1 class="infrographic-tit">PHOTOGRAPHERS</h1>
+                                                        </section>
+                                                        <!--End infrographic bignumber-->
+                                                    </div>
+                                                    <div class="span2 moudle">
+                                                        <section class="infrographic bignumber ux-mod-nobg">
+                                                            <div class="bignumber-item theme-color-5" data-digit="2">0</div>
+                                                            <h1 class="infrographic-tit">MAKEUP ARTISTS</h1>
+                                                        </section>
+                                                        <!--End infrographic bignumber-->
+                                                    </div>
+                                                    <div class="span2 moudle">
+                                                        <section class="infrographic bignumber ux-mod-nobg">
+                                                            <div class="bignumber-item theme-color-6" data-digit="2">0</div>
+                                                            <h1 class="infrographic-tit">STYLISTS</h1>
+                                                        </section>
+                                                        <!--End infrographic bignumber-->
+                                                    </div>
+                                                    <div class="span2 moudle">
+                                                        <section class="infrographic bignumber ux-mod-nobg">
+                                                            <div class="bignumber-item theme-color-7" data-digit="2">0</div>
+                                                            <h1 class="infrographic-tit">ILLUSTRATORS</h1>
+                                                        </section>
+                                                        <!--End infrographic bignumber-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <div class="pagebuilder-wrap">
+                                            <div class="container">
+                                                <div class="span12 moudle">
+                                                    <label>Search by Name: <input ng-model="searchName" style="width:100%"></label>
+                                                </div>
+                                            </div>
+                                            <div class="fullwrap_moudle">
+                                                <div class="row-fluid">
+                                                    <div id="" class="fullwidth-wrap bg-theme-color-10 parallax" style="background-position: 50% 0px;" data-speed="19">
+                                                        <div class="row-fluid" ng-repeat="data in dataholder| filter: searchName">
+                                                            <div
+                                                                class="span12 moudle moudle_has_animation animation-default-ux animation-scroll-ux  bottom-space-no  animation_hidden fadeined"
+                                                                style="opacity: 1; margin-bottom:0; padding:0;">
+
+                                                                <!--Portfolio interlock list-->
+                                                                <div class="interlock-list">
+                                                                    <a></a>
+                                                                    <section
+                                                                        class="interlock-item animation-default-ux animation-scroll-ux  fadeined">
+                                                                        <div class="iterlock-item-img" ng-if="$even">
+                                                                            <a class="ux-hover-wrap" data-lightbox="post001"
+                                                                                ng-href="{{data.Path}}"
+                                                                                style="background-image: url({{data.Path}})">
+                                                                                <div class="blog-item-img-hover ux-hover-icon-wrap">
+                                                                                    <i class="icon-m-view post-bgcolor-default"></i>
+                                                                                </div>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="iterlock-caption">
+                                                                            <a
+                                                                                ng-href="{{data.Url}}" target="_self"
+                                                                                title="{{data.Name}}"><h2>{{data.Name}}</h2></a>
+                                                                            <div class="iterblock-expt hidden-phone">
+                                                                                <p>{{data.Desc}}</p>
+                                                                            </div>
+                                                                            <ul class="blog_meta hidden-phone">
+                                                                                <li class="blog_meta_date"><i class="fa fa-calendar"></i>March
+                                                                                    26 2014</li>
+                                                                                <li class="blog_meta_cate"><i class="fa fa-tag"></i><a
+                                                                                    href="#"
+                                                                                    rel="tag">Editorial Design</a> / <a
+                                                                                    href="#"
+                                                                                    rel="tag">Graphic Design</a> / <a
+                                                                                    href="#"
+                                                                                    rel="tag">Fashion</a> / <a
+                                                                                    href="#"
+                                                                                    rel="tag">Photography</a> / <a
+                                                                                    href="#"
+                                                                                    rel="tag">Typography</a> / <a
+                                                                                    href="#"
+                                                                                    rel="tag">Fine Arts</a></li>
+                                                                            </ul>
+                                                                            <!--End .blog_meta-->
+                                                                        </div>
+                                                                        <div class="iterlock-item-img" ng-if="$odd">
+                                                                            <a class="ux-hover-wrap" data-lightbox="post002"
+                                                                                ng-href="{{data.Path}}"
+                                                                                style="background-image: url({{data.Path}})">
+                                                                                <div class="blog-item-img-hover ux-hover-icon-wrap">
+                                                                                    <i class="icon-m-view post-bgcolor-default"></i>
+                                                                                </div>
+                                                                            </a>
+                                                                        </div>
+                                                                    </section>
+                                                                </div>
+                                                                <!--End interlock-list-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--End content-wrap-inn-->
+                                </div>
+                                <!--end content_wrap-->
+                            </div>
+                        </div>
+                        <!--end post-->
+
+                        <script type="text/javascript" src="/assets/js/infographic.js"></script>
+                        

@@ -1,0 +1,121 @@
+
+<div class="page type-page status-publish hentry">
+    <div class="row-fluid">
+        <div id="content_wrap" class="">
+            <div class="row-fluid gallery-wrap gallery-wrap-fullwidth ">
+
+                <div class="row-fluid" ng-repeat="work in workholder" ng-if="work.authorname==authorname">
+                    <div class="clear gallery-post-wrap bottom-space-80">
+                        <div class="gallery-info-wrap container">
+                                <div class="title-bar-wrap " id="title-bar">
+                                    <div id="title-wrap">
+                                        <div class="title-wrap-inn">
+                                            <div id="main-title">
+                                                <h1 class="main-title" >
+                                                    {{work.author}}
+                                                </h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--End #title-wrap-->
+                                </div>
+                                <!--End #title-bar-wrap"-->
+                                <div class="row-fluid">
+                                    <div class="entry span9">
+                                        <p>{{work.desc}}</p>
+                                    </div>
+                                    <!--end entry-->
+                                    <div class="gallery-info-property span3 text-center">
+                                        <div>
+                                            <a class="icons-sidebar-unit" href="https://twitter.com/courtneybragg_" title="Follow us"><i class="fa fa-twitter-square"></i></a>    
+                                            <a class="icons-sidebar-unit" href="https://www.facebook.com/courtney.bragg1/" title="Follow us"><i class="fa fa-facebook-square"></i></a>
+                                            <a class="icons-sidebar-unit" href="https://www.instagram.com/courtney_bragg/" title=""><i class="fa fa-instagram"></i></a>
+                                            <a class="icons-sidebar-unit" href="https://www.pinterest.com/courtneybragg2/" title=""><i class="fa fa-pinterest-square"></i></a>
+                                            <a class="icons-sidebar-unit" href="https://www.pinterest.com/courtneybragg2/" title=""><i class="fa fa-linkedin-square"></i></a>
+                                        </div>
+                                        <br>
+                                        <div>
+                                            <i class="fa fa-calendar"></i>: March 26 2014
+                                            <i class="fa fa-tags"></i>: <a href="http://ximudesign.com/aside/tag/branding-2/" rel="tag">Branding</a>, <a href="http://ximudesign.com/aside/tag/graphic-design/" rel="tag">Graphic Design</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br><br>
+                            </div>
+                        <!--end gallery-info-wrap -->
+                    </div>
+                </div>
+            </div>
+            <div class="content-wrap-inn ">
+                <div class="pagebuilder-wrap">
+                    <div class="fullwrap_moudle">
+                        <div class="row-fluid">
+
+                            <div id="full" class="fullwidth-wrap">
+                                <div class="row-fluid">
+                                    <div class="span12 moudle bottom-space-no" style="padding:0;">
+                                        <!--Portfolio isotope-->
+                                        <div class="row-fluid  text-center">
+                                            <!--Filter-->
+                                            <div class="clearfix filters">
+                                                <ul>
+                                                    <li class="active"><a href="#" data-filter="*">All</a></li>
+                                                    <li><a data-filter=".filter_architecture" href="#">ARCHITECTURE</a></li>
+                                                    <li><a data-filter=".filter_branding" href="#">BRANDING</a></li>
+                                                    <li><a data-filter=".filter_illustration" href="#">ILLUSTRATION</a></li>
+                                                    <li><a data-filter=".filter_photography-2" href="#">PHOTOGRAPHY</a></li>
+                                                </ul>
+                                            </div>
+
+                                            <!--End filter-->
+                                            <div class="container-isotope" data-post="20140402-063639-867">
+                                                <div id="isotope-load">
+                                                    <div class="ux-loading"></div>
+                                                    <div class="ux-loading-transform">
+                                                        <div class="loading-dot1">&nbsp;</div>
+                                                        <div class="loading-dot2">&nbsp;</div>
+                                                    </div>
+                                                </div>
+                                                <div class="isotope masonry isotope_fade" data-space="1px" data-size="brick" style="margin: -1px 0px 0px -1px;" ng-repeat="work in workholder" ng-if="work.authorname==authorname">
+                                                    <!--Item-->
+                                                    <div class="filter_architecture filter_blog filter_portfolio width-and-small isotope-item  brick-with-img" ng-repeat="project in work.portfolio">
+                                                        <div class="inside brick-inside post-bgcolor-default" style=" margin:1px 0 0 1px;">
+                                                            <a href="content-portfolio-images-on-right.html" title="PORTFOLIO POST INFO LEFT" class="brick-link">
+                                                                <div class="brick-hover-mask brick-hover">
+                                                                    <h3 class="brick-title">{{project.title}}</h3>
+                                                                </div>
+                                                                <div class="brick-content">
+                                                                    <img ng-src="{{project.imgs[0].src}}" class="attachment-imagebox-thumb wp-post-image" alt="{{work.portfolio.title}}">
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--End container-isotope-->
+                                        </div>
+                                        <!--End row-fluid-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!--End content-wrap-inn-->
+        </div>
+        <!--end content_wrap-->
+    </div>
+</div>
+<!--end post-->
+
+
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        var ux_pb = new ThemePageBuilder();
+        ux_pb.init();
+    });
+</script>
