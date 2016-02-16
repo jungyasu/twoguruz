@@ -6,6 +6,20 @@
 
                 <div class="row-fluid" ng-repeat="work in workholder" ng-if="work.authorname==authorname">
                     <div class="clear gallery-post-wrap bottom-space-80">
+                        <div class="gallery-wrap-slider ">
+                                                    <!--galleria slider
+                                                    data-crop: fit: flase, fill: true
+                                                    data-transition: fade, slide
+                                                    data-interval: timer
+                                                    -->
+                                                    <div class="galleria" data-crop="false" data-transition="fade" data-interval="5000">
+                                                        <div ng-repeat="work in workholder" ng-if="$index == index_num">
+                                                            <img ng-repeat="imgs in work.imgs" ng-src="{{imgs.src}}">
+                                                        </div>
+                                                            <!-- <img ng-repeat="imgs in selectedImg.src" ng-src="{{imgs.src}}"> -->
+                                                    </div>
+                                                </div>
+
                         <div class="gallery-info-wrap container">
                                 <div class="title-bar-wrap " id="title-bar">
                                     <div id="title-wrap">
@@ -80,7 +94,7 @@
                                                     <!--Item-->
                                                     <div class="filter_architecture filter_blog filter_portfolio width-and-small isotope-item  brick-with-img" ng-repeat="project in work.portfolio">
                                                         <div class="inside brick-inside post-bgcolor-default" style=" margin:1px 0 0 1px;">
-                                                            <a href="content-portfolio-images-on-right.html" title="PORTFOLIO POST INFO LEFT" class="brick-link">
+                                                            <a href="/gallery/courtneybragg" title="PORTFOLIO POST INFO LEFT" class="brick-link">
                                                                 <div class="brick-hover-mask brick-hover">
                                                                     <h3 class="brick-title">{{project.title}}</h3>
                                                                 </div>
