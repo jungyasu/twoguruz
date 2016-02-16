@@ -31,7 +31,10 @@ var tgApp = angular.module('tgApp', [
                 controller: 'portfolioController'})
             .when('/gallery/:authorname', {
                 templateUrl: '/partials/gallery.html', 
-                controller: 'portfolioController'})
+                controller: 'galleryController'})
+            .when('/gallery/:authorname/:projectnum', {
+                templateUrl: '/partials/gallery.html', 
+                controller: 'galleryController'})
             //if no valid routes are found, redirect to /home
             .otherwise({redirectTo: '/'});
         // $routeProvider.when('/projects', {templateUrl: '/partials/projects.html', controller: 'projectsController'});
