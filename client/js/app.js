@@ -1,22 +1,41 @@
 var tgApp = angular.module('tgApp', [
     'ngRoute',
-    'ngAnimate']).
+    'ngAnimate',
+    'ngResource']).
     config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
         
         //typical routes... when someone navigates to a given directory, load the partial, and use the controller
-        $routeProvider.when('/', {templateUrl: '/partials/home.html', controller: 'homeController', reloadOnSearch:false});
-        $routeProvider.when('/service', {templateUrl: '/partials/service.html', controller: 'serviceController', reloadOnSearch:false});
-        $routeProvider.when('/contact', {templateUrl: '/partials/contact.html', controller: 'contactController', reloadOnSearch:false});
-        $routeProvider.when('/client', {templateUrl: '/partials/client.html', controller: 'clientController', reloadOnSearch:false});
-        $routeProvider.when('/creative', {templateUrl: '/partials/creative.html', controller: 'creativeController', reloadOnSearch:false});
-        // $routeProvider.when('/portfolio', {templateUrl: '/partials/portfolio.html', controller: 'portfolioController as work', reloadOnSearch:false});
-        $routeProvider.when('/courtneybragg', {templateUrl: '/partials/portfolio.html', controller: 'portfolioController', reloadOnSearch:false});
+        $routeProvider
+            .when('/', {
+                templateUrl: '/partials/home.html', 
+                controller: 'homeController', 
+                reloadOnSearch:false})
+            .when('/service', {
+                templateUrl: '/partials/service.html', 
+                controller: 'serviceController', 
+                reloadOnSearch:false})
+            .when('/contact', {
+                templateUrl: '/partials/contact.html', 
+                controller: 'contactController', 
+                reloadOnSearch:false})
+            .when('/client', {
+                templateUrl: '/partials/client.html', 
+                controller: 'clientController', 
+                reloadOnSearch:false})
+            .when('/creative', {
+                templateUrl: '/partials/creative.html', 
+                controller: 'creativeController', 
+                reloadOnSearch:false})
+            .when('/creative/:authorname', {
+                templateUrl: '/partials/portfolio.html', 
+                controller: 'portfolioController'})
+            //if no valid routes are found, redirect to /home
+            .otherwise({redirectTo: '/'});
         // $routeProvider.when('/projects', {templateUrl: '/partials/projects.html', controller: 'projectsController'});
         // $routeProvider.when('/projects/customerapi', {templateUrl: '/partials/projects/customerapi.html', controller: 'customerApiController'});
         // $routeProvider.when('/projects/chat', {templateUrl: '/partials/projects/chat.html', controller: 'chatController'});
         
-        //if no valid routes are found, redirect to /home
-        $routeProvider.otherwise({redirectTo: '/'});
+        
         
         //reload refresh once
         

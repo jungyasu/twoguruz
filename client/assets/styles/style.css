@@ -878,7 +878,7 @@ body.single .pagebuilder-wrap{
   width: 65%; margin-bottom:0; margin-left: 0; overflow: hidden;
 }
 .gallery-wrap .post-meta{
-  display: none;
+  /*display: none;*/
 }
 .gallery-info-wrap.span4{
   width: 35%; margin-bottom:0; margin-left: 0; -webkit-backface-visibility:hidden; -webkit-transform: translateZ(0);

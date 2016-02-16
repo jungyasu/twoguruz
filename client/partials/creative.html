@@ -84,7 +84,7 @@
                                                                         class="interlock-item animation-default-ux animation-scroll-ux  fadeined">
                                                                         <div class="iterlock-item-img" ng-if="$even">
                                                                             <a class="ux-hover-wrap" data-lightbox="post001"
-                                                                                href="{{data.Path}}"
+                                                                                ng-href="{{data.Path}}"
                                                                                 style="background-image: url({{data.Path}})">
                                                                                 <div class="blog-item-img-hover ux-hover-icon-wrap">
                                                                                     <i class="icon-m-view post-bgcolor-default"></i>
@@ -93,7 +93,7 @@
                                                                         </div>
                                                                         <div class="iterlock-caption">
                                                                             <a
-                                                                                href="{{data.Url}}" target="_self"
+                                                                                ng-href="{{data.Url}}" target="_self"
                                                                                 title="{{data.Name}}"><h2>{{data.Name}}</h2></a>
                                                                             <div class="iterblock-expt hidden-phone">
                                                                                 <p>{{data.Desc}}</p>
@@ -119,7 +119,7 @@
                                                                         </div>
                                                                         <div class="iterlock-item-img" ng-if="$odd">
                                                                             <a class="ux-hover-wrap" data-lightbox="post002"
-                                                                                href="{{data.Path}}"
+                                                                                ng-href="{{data.Path}}"
                                                                                 style="background-image: url({{data.Path}})">
                                                                                 <div class="blog-item-img-hover ux-hover-icon-wrap">
                                                                                     <i class="icon-m-view post-bgcolor-default"></i>
@@ -143,5 +143,5 @@
                         </div>
                         <!--end post-->
 
-                        <script type="text/javascript" src="assets/js/infographic.js"></script>
+                        <script type="text/javascript" src="/assets/js/infographic.js"></script>
                         
