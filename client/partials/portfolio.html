@@ -1,3 +1,8 @@
+<style>
+.white-space-pre-line {
+    white-space: pre-line;
+}
+</style>
 
 <div class="page type-page status-publish hentry">
     <div class="row-fluid">
@@ -36,21 +41,21 @@
                                 <!--End #title-bar-wrap"-->
                                 <div class="row-fluid">
                                     <div class="entry span9">
-                                        <p>{{work.desc}}</p>
+                                        <p class="white-space-pre-line" ng-bind-html-unsafe="work.desc">{{work.desc}}</p>
                                     </div>
                                     <!--end entry-->
                                     <div class="gallery-info-property span3 text-center">
                                         <div>
-                                            <a class="icons-sidebar-unit" href="https://twitter.com/courtneybragg_" title="Follow us"><i class="fa fa-twitter-square"></i></a>    
-                                            <a class="icons-sidebar-unit" href="https://www.facebook.com/courtney.bragg1/" title="Follow us"><i class="fa fa-facebook-square"></i></a>
-                                            <a class="icons-sidebar-unit" href="https://www.instagram.com/courtney_bragg/" title=""><i class="fa fa-instagram"></i></a>
-                                            <a class="icons-sidebar-unit" href="https://www.pinterest.com/courtneybragg2/" title=""><i class="fa fa-pinterest-square"></i></a>
-                                            <a class="icons-sidebar-unit" href="https://www.pinterest.com/courtneybragg2/" title=""><i class="fa fa-linkedin-square"></i></a>
+                                            <a class="icons-sidebar-unit" href="{{work.twitter}}" title="Follow us"><i class="fa fa-twitter-square"></i></a>    
+                                            <a class="icons-sidebar-unit" href="{{work.facebook}}" title="Follow us"><i class="fa fa-facebook-square"></i></a>
+                                            <a class="icons-sidebar-unit" href="{{work.instagram}}" title=""><i class="fa fa-instagram"></i></a>
+                                            <a class="icons-sidebar-unit" href="{{work.pinterest}}" title=""><i class="fa fa-pinterest-square"></i></a>
+                                            <a class="icons-sidebar-unit" href="{{work.linkedin}}" title=""><i class="fa fa-linkedin-square"></i></a>
                                         </div>
                                         <br>
                                         <div>
                                             <i class="fa fa-calendar"></i>: March 26 2014
-                                            <i class="fa fa-tags"></i>: <a href="http://ximudesign.com/aside/tag/branding-2/" rel="tag">Branding</a>, <a href="http://ximudesign.com/aside/tag/graphic-design/" rel="tag">Graphic Design</a></span>
+                                            <i class="fa fa-tags"></i>: <a href="#" rel="tag">Branding</a>, <a href="#" rel="tag">Graphic Design</a></span>
                                         </div>
                                     </div>
                                 </div>
@@ -94,7 +99,7 @@
                                                     <!--Item-->
                                                     <div class="filter_architecture filter_blog filter_portfolio width-and-small isotope-item  brick-with-img" ng-repeat="project in work.portfolio">
                                                         <div class="inside brick-inside post-bgcolor-default" style=" margin:1px 0 0 1px;">
-                                                            <a href="/gallery/courtneybragg" title="PORTFOLIO POST INFO LEFT" class="brick-link">
+                                                            <a ng-href="{{project.url}}" title="PORTFOLIO POST INFO LEFT" class="brick-link">
                                                                 <div class="brick-hover-mask brick-hover">
                                                                     <h3 class="brick-title">{{project.title}}</h3>
                                                                 </div>

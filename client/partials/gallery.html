@@ -2,7 +2,7 @@
 <!-- The Gallery as inline carousel, can be positioned anywhere on the page -->
 <div ng-repeat="work in workholder" ng-if="work.authorname==authorname">
     <div id="links" style="display:none;">
-        <div ng-repeat="projects in work.portfolio">
+        <div ng-repeat="projects in work.portfolio track by $index" ng-if="$index==projectnum">
             <a ng-repeat="img in projects.imgs" ng-href="{{img.src}}" title="{{projects.title}}" data-gallery="">
                 <img ng-src="{{img.src}}">
             </a>
@@ -11,13 +11,120 @@
     <div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls">
         <div class="slides"></div>
         <h3 class="title"></h3>
-        <p class="description"></p>
+        
         <a class="prev">‹</a>
         <a class="next">›</a>
         <a class="play-pause"></a>
         <ol class="indicator"></ol>
     </div>
 </div>
+
+<div class="gallery-info-wrap container"  ng-repeat="work in workholder" ng-if="work.authorname==authorname">              
+    <div class="title-bar-wrap " id="title-bar" ng-repeat="projects in work.portfolio track by $index" ng-if="$index==projectnum">
+        <div id="title-wrap">
+            <div class="title-wrap-inn">
+                <div id="main-title">
+                    <h1 class="main-title">
+                        {{projects.title}}                
+                    </h1>       
+                    <div class="post-meta">
+                            <span class="post-meta-unit date">Date: April 1 2014</span>
+                            <span class="post-meta-unit tag">Tags: <a href="http://ximudesign.com/aside/tag/digital-art/" rel="tag">Digital Art</a>, <a href="http://ximudesign.com/aside/tag/illustration-2/" rel="tag">Illustration</a></span>
+                    </div>
+                </div>                            
+            </div>
+        </div><!--End #title-wrap-->
+    </div><!--End #title-bar-wrap"-->
+
+    
+    <div class="row-fluid" ng-repeat="projects in work.portfolio track by $index" ng-if="$index==projectnum">
+        <div class="entry span9">
+            <p>{{projects.desc}}</p>
+        </div><!--end entry-->
+        <ul class="gallery-info-property span3">
+            <li>
+                <span class="gallery-info-property-tit">Author:</span>
+                <span><a href="https://www.behance.net/gstv">{{work.author}}</a></span>
+            </li>
+                
+                    
+            <li>
+                <span class="gallery-info-property-tit">Project:</span>
+                <span><a href="https://www.behance.net/gallery/Reacciones/10702889">{{projects.title}}</a></span>
+            </li>
+                
+        
+                            <li>
+                <span class="gallery-info-property-tit date">Date: </span>
+                <span>April 1 2014</span>
+            </li>
+                        <li>
+                <span class="gallery-info-property-tit tag">Tags: </span>
+                <span><a href="http://ximudesign.com/aside/tag/digital-art/" rel="tag">Digital Art</a>, <a href="http://ximudesign.com/aside/tag/illustration-2/" rel="tag">Illustration</a></span>
+            </li>
+        </ul>              
+    </div>
+
+</div>
+
+<div class="content-wrap-inn ">
+    <div class="pagebuilder-wrap">
+        <div class="fullwrap_moudle">
+            <div class="row-fluid">
+
+                <div id="full" class="fullwidth-wrap">
+                    <div class="row-fluid">
+                        <div class="span12 moudle bottom-space-no" style="padding:0;">
+                            <!--Portfolio isotope-->
+                            <div class="row-fluid  text-center">
+                                <!--Filter-->
+                                <div class="clearfix filters">
+                                    <ul>
+                                        <li class="active"><a href="#" data-filter="*">All</a></li>
+                                        <li><a data-filter=".filter_architecture" href="#">ARCHITECTURE</a></li>
+                                        <li><a data-filter=".filter_branding" href="#">BRANDING</a></li>
+                                        <li><a data-filter=".filter_illustration" href="#">ILLUSTRATION</a></li>
+                                        <li><a data-filter=".filter_photography-2" href="#">PHOTOGRAPHY</a></li>
+                                    </ul>
+                                </div>
+
+                                <!--End filter-->
+                                <div class="container-isotope" data-post="20140402-063639-867">
+                                    <div id="isotope-load">
+                                        <div class="ux-loading"></div>
+                                        <div class="ux-loading-transform">
+                                            <div class="loading-dot1">&nbsp;</div>
+                                            <div class="loading-dot2">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                    <div class="isotope masonry isotope_fade" data-space="1px" data-size="brick" style="margin: -1px 0px 0px -1px;" ng-repeat="work in workholder" ng-if="work.authorname==authorname">
+                                        <!--Item-->
+                                        <div class="filter_architecture filter_blog filter_portfolio width-and-small isotope-item  brick-with-img" ng-repeat="project in work.portfolio">
+                                            <div class="inside brick-inside post-bgcolor-default" style=" margin:1px 0 0 1px;">
+                                                <a ng-href="{{project.url}}" title="PORTFOLIO POST INFO LEFT" class="brick-link">
+                                                    <div class="brick-hover-mask brick-hover">
+                                                        <h3 class="brick-title">{{project.title}}</h3>
+                                                    </div>
+                                                    <div class="brick-content">
+                                                        <img ng-src="{{project.imgs[0].src}}" class="attachment-imagebox-thumb wp-post-image" alt="{{work.portfolio.title}}">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End container-isotope-->
+                            </div>
+                            <!--End row-fluid-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<!--End content-wrap-inn-->
 
 <!--<div id="links" class="links" ng-repeat="work in workholder" style="display:none;" ng-if="work.authorname==authorname">
   <div ng-repeat="projects in work.portfolio">
@@ -43,12 +150,15 @@
 <script src="/assets/js/blueimp-gallery-youtube.js"></script>
 <script src="/assets/js/vendor/jquery.js"></script>
 <script src="/assets/js/jquery.blueimp-gallery.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+
 <script>
 $(document).ready(function() {
     blueimp.Gallery(
         document.getElementById('links').getElementsByTagName('a'),
         {
             container: '#blueimp-gallery-carousel',
+            fullscreen: true,
             carousel: true,
             onslide: function (index, slide) {
                 var unique_id = this.list[index].getAttribute('data-unique-id');
@@ -57,5 +167,21 @@ $(document).ready(function() {
         }
     );
 });
-</script>
+jQuery(document).ready(function() {
+        var ux_pb = new ThemePageBuilder();
+        ux_pb.init();
+    });
 
+function resize()
+{
+    var heights = window.innerHeight;
+    document.getElementById("blueimp-gallery-carousel").style.height = heights + "px";
+}
+resize();
+window.onresize = function() {
+    resize();
+};
+//]]> 
+
+
+</script>

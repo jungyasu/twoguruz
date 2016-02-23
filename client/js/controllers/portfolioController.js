@@ -55,16 +55,23 @@
 tgApp.controller('portfolioController', ['$scope', '$routeParams', function($scope, $routeParams){
 
   $scope.authorname = $routeParams.authorname;
+  $scope.projecttitle = $routeParams.projecttitle;
+  $scope.projectnum = $routeParams.projectnum;
 
 
   var workObject = [{
       authorname: 'courtneybragg',
       author:'COURTNEY BRAGG',
+      facebook:'https://www.facebook.com/courtney.bragg1/',
+      twitter:'https://twitter.com/courtneybragg_',
+      instagram:'https://www.instagram.com/courtney_bragg/',
+      pinterest:'https://www.pinterest.com/courtneybragg2/',
+      linkedin:'https://www.linkedin.com',
       desc: 'Studies Bachelor of Design at Massey University, Wellington.',
       portfolio:[{
                   title: 'SALT',
                   desc: 'Egestas adipiscing purus elementum risus turpis tincidunt',
-                  url: 'creative/courtneybragg/1/',
+                  url: '/gallery/courtneybragg/0/',
                   imgs: [{src:'/creatives/courtneybragg/projects/SALT/1.jpg'},
                         {src:'/creatives/courtneybragg/projects/SALT/2.jpg'},
                         {src:'/creatives/courtneybragg/projects/SALT/3.jpg'},
@@ -79,7 +86,7 @@ tgApp.controller('portfolioController', ['$scope', '$routeParams', function($sco
                 },{
                   title: 'DUSK & DAWN LOOKBOOK 2016',
                   desc: 'Egestas adipiscing purus elementum risus turpis tincidunt',
-                  url: 'creative/courtneybragg/2/',
+                  url: '/gallery/courtneybragg/1/',
                   imgs: [{src:'/creatives/courtneybragg/projects/DuskAndDawn/1.jpg'},
                         {src:'/creatives/courtneybragg/projects/DuskAndDawn/2.jpg'},
                         {src:'/creatives/courtneybragg/projects/DuskAndDawn/3.jpg'},
@@ -91,7 +98,7 @@ tgApp.controller('portfolioController', ['$scope', '$routeParams', function($sco
                 },{
                   title: 'F*CK',
                   desc: 'Egestas adipiscing purus elementum risus turpis tincidunt',
-                  url: 'creative/courtneybragg/3/',
+                  url: '/gallery/courtneybragg/2/',
                   imgs: [{src:'/creatives/courtneybragg/projects/F_CK/1.jpg'},
                         {src:'/creatives/courtneybragg/projects/F_CK/2.jpg'},
                         {src:'/creatives/courtneybragg/projects/F_CK/3.jpg'},
@@ -104,7 +111,7 @@ tgApp.controller('portfolioController', ['$scope', '$routeParams', function($sco
                 },{
                   title: 'Death By Dagger',
                   desc: 'Egestas adipiscing purus elementum risus turpis tincidunt',
-                  url: 'creative/courtneybragg/4/',
+                  url: '/gallery/courtneybragg/3/',
                   imgs: [{src:'/creatives/courtneybragg/projects/DeathByDagger/1.jpg'},
                         {src:'/creatives/courtneybragg/projects/DeathByDagger/2.jpg'},
                         {src:'/creatives/courtneybragg/projects/DeathByDagger/3.jpg'},
@@ -116,7 +123,7 @@ tgApp.controller('portfolioController', ['$scope', '$routeParams', function($sco
                 },{
                   title: 'Ralph Hotere Black Light',
                   desc: 'Egestas adipiscing purus elementum risus turpis tincidunt',
-                  url: 'creative/courtneybragg/5/',
+                  url: '/gallery/courtneybragg/4/',
                   imgs: [{src:'/creatives/courtneybragg/projects/RalphHotereBlackLight/1.jpg'},
                         {src:'/creatives/courtneybragg/projects/RalphHotereBlackLight/2.jpg'},
                         {src:'/creatives/courtneybragg/projects/RalphHotereBlackLight/3.jpg'},
@@ -124,52 +131,57 @@ tgApp.controller('portfolioController', ['$scope', '$routeParams', function($sco
                 },{
                   title: 'The Māori New Year',
                   desc: 'Egestas adipiscing purus elementum risus turpis tincidunt',
-                  url: 'creative/courtneybragg/6/',
+                  url: '/gallery/courtneybragg/5/',
                   imgs: [{src:'/creatives/courtneybragg/projects/TheMaoriNewYear/1.jpg'}]
                 }
               ]},{
       authorname: 'daynamcc',
       author:'DAYNA MCC',
-      desc: 'Her inspiration comes from the beauty that is found within all things.',
+      facebook:'https://www.facebook.com/daynamccuaigart/',
+      twitter:'https://twitter.com/',
+      instagram:'https://www.instagram.com/daynamcc_art/',
+      pinterest:'https://www.pinterest.com/',
+      linkedin:'https://www.linkedin.com/',
+      desc: 'Dayna is Visual Artist living in Vancouver, originally from Orillia, Ontario. \n\n She is self-taught primarily doing watercolour, coloured pencil, and pencil portraits. She couples basic images with vibrant abstract colours and vivid detailing. \n\nThe results of her art are emotional life-like human portraits, as well as other subjects.\n\n Her synesthetic response to colour allows her to capture the emotional power behind each subject. Her inspiration comes from the beauty that is found within all things.',
       portfolio:[{
               title: 'Ariel',
               desc: 'Egestas adipiscing purus elementum risus turpis tincidunt',
-              url: 'creative/daynamcc/1/',
+              url: '/gallery/daynamcc/0/',
               imgs: [{src:'/creatives/daynamcc/projects/arielfinal.jpg'}]
             },{
               title: 'Audrey',
               desc: 'Egestas adipiscing purus elementum risus turpis tincidunt',
-              url: 'creative/daynamcc/2/',
+              url: '/gallery/daynamcc/1/',
               imgs: [{src:'/creatives/daynamcc/projects/audrey.jpg'}]
             },{
               title: 'Cara',
               desc: 'Egestas adipiscing purus elementum risus turpis tincidunt',
-              url: 'creative/daynamcc/3/',
+              url: '/gallery/daynamcc/2/',
               imgs: [{src:'/creatives/daynamcc/projects/cara.jpg'}]
             },{
               title: 'Cranberry',
               desc: 'Egestas adipiscing purus elementum risus turpis tincidunt',
-              url: 'creative/daynamcc/4/',
+              url: '/gallery/daynamcc/3/',
               imgs: [{src:'/creatives/daynamcc/projects/cranberry.jpg'}]
             },{
               title: 'Jade',
               desc: 'Egestas adipiscing purus elementum risus turpis tincidunt',
-              url: 'creative/daynamcc/5/',
+              url: '/gallery/daynamcc/4/',
               imgs: [{src:'/creatives/daynamcc/projects/jade.jpg'}]
             },{
               title: 'Mr. Carter',
               desc: 'Egestas adipiscing purus elementum risus turpis tincidunt',
-              url: 'creative/daynamcc/6/',
+              url: '/gallery/daynamcc/5/',
               imgs: [{src:'/creatives/daynamcc/projects/mrcarter.jpg'}]
             },{
               title: 'Symba',
               desc: 'Egestas adipiscing purus elementum risus turpis tincidunt',
-              url: 'creative/daynamcc/7/',
+              url: '/gallery/daynamcc/6/',
               imgs: [{src:'/creatives/daynamcc/projects/symba.jpg'}]
             },{
               title: 'Muhammad',
               desc: 'Egestas adipiscing purus elementum risus turpis tincidunt',
-              url: 'creative/daynamcc/8/',
+              url: '/gallery/daynamcc/7/',
               imgs: [{src:'/creatives/daynamcc/projects/muhammad.jpg'}]
             }]}
 
