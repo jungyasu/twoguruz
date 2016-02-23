@@ -862,7 +862,7 @@ div.container3d:hover .card .face.front{
 	background-color: transparent;
 }
 .brick-content img{
-	position: relative; z-index: 1; width: 100%; /*Yasu*/ min-height:258px;
+	position: relative; z-index: 1; width: 100%; /*Yasu*/ min-height:258px; height:100%;
 }
 .brick-hover-mask{
 	width: 100%; height: 100%;
